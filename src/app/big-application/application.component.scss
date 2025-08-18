@@ -1,0 +1,74 @@
+.application-container {
+  flex-direction: column;
+  display: flex;
+  height: 1400px;
+  width: 100%;
+  background-color: rgb(56, 52, 52);
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.заявка {
+  color: white;
+  position: relative;
+  margin-top: 90px;
+}
+.input-application {
+  margin-top: 40px;
+}
+.application-phone {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: solid white 3px;
+  color: white;
+  font-size: 20px;
+  width: 210px;
+}
+.application-select {
+  color: black;
+  text-align: start;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.application-description {
+  font-size: 20px;
+  color: rgb(174, 8, 185);
+}
+.application-submit {
+  color: black;
+  border-radius: 12px;
+  width: 150px;
+  font-size: 13px;
+  background-color: rgb(181, 52, 52);
+}
+// .application-submit:hover {
+//   color: white;
+//   background-color: rgb(20, 76, 125);
+// }
+
+.enable {
+  background-color: rgb(58, 131, 58);
+}
+.enable:hover {
+  color: white;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+/*.application_number {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: 20px;
+  right: 100px;
+}*/
+.textarea-input {
+  width: 400px;
+}

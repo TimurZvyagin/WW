@@ -1,0 +1,62 @@
+<div class="application-container">
+  <form class="form" [formGroup]="form">
+    <h1 class="заявка">Заявка</h1>
+    <div class="input-application">
+      <mat-form-field
+        class="form-size"
+        appearance="outline"
+        class="email-input"
+      >
+        <mat-label>email</mat-label>
+        <input
+          matInput
+          placeholder="Placeholder"
+          required
+          formControlName="email"
+        />
+      </mat-form-field>
+    </div>
+    <div class="input-application">
+      <label class="application_number"> </label>
+      <input
+        class="application-phone"
+        formControlName="phone"
+        required
+        [mask]="phoneMask"
+      />
+    </div>
+    <div class="input-application">
+      <mat-form-field>
+        <mat-label>выбери опцию</mat-label>
+        <mat-select
+          [(ngModel)]="calcar"
+          class="application-select"
+          formControlName="car"
+        >
+          <mat-option value="VOLVO">VOLVO</mat-option>
+          <mat-option value="mercedes">Mercedes</mat-option>
+          <mat-option value="audi">Audi</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="input-application">
+      <mat-form-field class="textarea-input">
+        <mat-label class="application-description">only for fun </mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+    <section>
+      <div>
+        <button
+          [class.enable]="form.valid"
+          [disabled]="form.invalid"
+          class="application-submit"
+          mat-stroked-button
+          (click)="Submit()"
+        >
+          {{ calcar === "VOLVO" ? "КЛОУН" : "submit" }}
+        </button>
+      </div>
+    </section>
+  </form>
+</div>

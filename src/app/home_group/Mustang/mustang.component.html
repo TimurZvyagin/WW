@@ -1,0 +1,22 @@
+<div class="car-galerei">
+  <div class="car-foru">Галерея автомобилей</div>
+  <div class="car-container">
+    <div class="carca-galere active" (click)="setActive($event)">
+      <img src="assets/img/ford-mustang.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/baxa-m3.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/volvo-edition.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/Merceds-GTR.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="car-application">
+  <button mat-button class="button-mustang" (click)="openDialog()">
+    Выбери тачку
+  </button>
+</div>

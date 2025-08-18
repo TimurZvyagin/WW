@@ -1,0 +1,16 @@
+<div class="sliders-container">
+  <img [src]="slides[currentIndex].img" [class.fade]="true" class="photo" />
+  <div class="container_text">
+    <h1 [@fadeInOut]="isShowU ? 'open' : 'close'" class="sliders_text">
+      {{ slides[currentIndex].description }}
+    </h1>
+    <div class="dots-container">
+      <button
+        *ngFor="let slide of slides; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)"
+      ></button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.back {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+}
+.video-bg {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  z-index: 1;
+}
+.back-fon {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.glav_text {
+  display: flex;
+  white-space: nowrap;
+  margin-top: 100px;
+  margin-left: 30px;
+  z-index: 3;
+  color: #fff;
+  font-family: "Monaco", sans-serif;
+}
+.neglav_text {
+  margin-top: 250px;
+  z-index: 3;
+  display: flex;
+  color: #fff;
+  font-family: "Monaco", sans-serif;
+}
+
+/* */
+.wrapper-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+.wrapper-inner {
+  display: contents;
+  justify-content: center;
+}
+.card {
+  margin-right: 30px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(30px);
+  display: inline-block;
+  width: 25%;
+  height: 130px;
+}
+.text_card {
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  z-index: 3;
+  margin-bottom: 40px;
+}
+.otziv {
+  text-align: center;
+  color: #fff;
+}
+/*    */
+
+.application-container {
+  width: 100%;
+  height: 400px;
+}
+.application-inner {
+  display: flex;
+}
+.application_recomindation {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+  font-family: "Monaco", sans-serif;
+  font-size: 30px;
+  color: black;
+}
+.application-button {
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  margin-left: 20px;
+  font-size: 18px;
+  width: 450px;
+  height: 80px;
+  border: #000000 2px solid;
+  border-radius: 15px;
+  transition: 1s;
+}
+.application-button:hover {
+  font-size: 25px;
+  color: #fff;
+  background-color: #6200ea;
+}
+.app-lication {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
