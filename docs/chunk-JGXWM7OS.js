@@ -1,0 +1,814 @@
+import { b as Pe } from "./chunk-CHXUGZBM.js";
+import { a as be, b as ke } from "./chunk-Z4NBKBPH.js";
+import {
+  k as Fe,
+  l as we,
+  m as Te,
+  n as Se,
+  o as Ae,
+  p as Re,
+  q as De,
+  r as Oe,
+} from "./chunk-RZRL73QH.js";
+import {
+  a as pe,
+  b as ue,
+  c as fe,
+  d as C,
+  f as _e,
+  g as xe,
+  h as ve,
+  j as F,
+  k as ge,
+  l as ye,
+  m as Ce,
+  n as Ie,
+  o as Me,
+  p as Ee,
+} from "./chunk-3OZ7F5GS.js";
+import {
+  C as le,
+  D as he,
+  G as k,
+  h as se,
+  p as me,
+} from "./chunk-2KGD3LIW.js";
+import "./chunk-D63QER6G.js";
+import {
+  $b as T,
+  Bb as a,
+  Bc as de,
+  Cb as i,
+  Db as h,
+  Fa as K,
+  Gb as J,
+  Hb as ee,
+  Jb as y,
+  Lb as M,
+  Mb as E,
+  Ob as P,
+  Pb as N,
+  Qb as V,
+  R as j,
+  Tb as te,
+  Ub as b,
+  V as B,
+  W as U,
+  Wb as ce,
+  X as _,
+  Xb as oe,
+  Yb as ie,
+  Z as H,
+  Za as d,
+  Zb as ae,
+  aa as s,
+  db as Z,
+  ec as ne,
+  ga as W,
+  gc as f,
+  ha as x,
+  hc as re,
+  ia as v,
+  j as L,
+  ja as G,
+  ka as X,
+  kb as u,
+  la as R,
+  lb as g,
+  oa as $,
+  sa as D,
+  ta as Q,
+  ub as I,
+  vb as m,
+  xa as Y,
+  xb as l,
+  yb as O,
+  z as q,
+} from "./chunk-OQHZ6M44.js";
+var Ne = (() => {
+  class o {
+    static ɵfac = function (c) {
+      return new (c || o)();
+    };
+    static ɵmod = g({ type: o });
+    static ɵinj = _({ imports: [k, k] });
+  }
+  return o;
+})();
+var S = (() => {
+  class o extends L {
+    ngOnDestroy() {
+      this.next(), this.complete();
+    }
+    static {
+      this.ɵfac = (() => {
+        let e;
+        return function (t) {
+          return (e || (e = R(o)))(t || o);
+        };
+      })();
+    }
+    static {
+      this.ɵprov = U({ token: o, factory: o.ɵfac });
+    }
+  }
+  return o;
+})();
+var He = ["mat-internal-form-field", ""],
+  We = ["*"],
+  Ve = (() => {
+    class o {
+      labelPosition;
+      static ɵfac = function (c) {
+        return new (c || o)();
+      };
+      static ɵcmp = u({
+        type: o,
+        selectors: [["div", "mat-internal-form-field", ""]],
+        hostAttrs: [1, "mdc-form-field", "mat-internal-form-field"],
+        hostVars: 2,
+        hostBindings: function (c, t) {
+          c & 2 && l("mdc-form-field--align-end", t.labelPosition === "before");
+        },
+        inputs: { labelPosition: "labelPosition" },
+        attrs: He,
+        ngContentSelectors: We,
+        decls: 1,
+        vars: 0,
+        template: function (c, t) {
+          c & 1 && (M(), E(0));
+        },
+        styles: [
+          `.mat-internal-form-field{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-flex;align-items:center;vertical-align:middle}.mat-internal-form-field>label{margin-left:0;margin-right:auto;padding-left:4px;padding-right:0;order:0}[dir=rtl] .mat-internal-form-field>label{margin-left:auto;margin-right:0;padding-left:0;padding-right:4px}.mdc-form-field--align-end>label{margin-left:auto;margin-right:0;padding-left:0;padding-right:4px;order:-1}[dir=rtl] .mdc-form-field--align-end .mdc-form-field--align-end label{margin-left:0;margin-right:auto;padding-left:4px;padding-right:0}
+`,
+        ],
+        encapsulation: 2,
+        changeDetection: 0,
+      });
+    }
+    return o;
+  })();
+var Ge = ["input"],
+  Xe = ["label"],
+  $e = ["*"],
+  Qe = new H("mat-checkbox-default-options", {
+    providedIn: "root",
+    factory: Le,
+  });
+function Le() {
+  return {
+    color: "accent",
+    clickAction: "check-indeterminate",
+    disabledInteractive: !1,
+  };
+}
+var r = (function (o) {
+    return (
+      (o[(o.Init = 0)] = "Init"),
+      (o[(o.Checked = 1)] = "Checked"),
+      (o[(o.Unchecked = 2)] = "Unchecked"),
+      (o[(o.Indeterminate = 3)] = "Indeterminate"),
+      o
+    );
+  })(r || {}),
+  Ye = { provide: pe, useExisting: B(() => qe), multi: !0 },
+  z = class {
+    source;
+    checked;
+  },
+  ze = Le(),
+  qe = (() => {
+    class o {
+      _elementRef = s(Y);
+      _changeDetectorRef = s(ne);
+      _ngZone = s(Q);
+      _animationMode = s(K, { optional: !0 });
+      _options = s(Qe, { optional: !0 });
+      focus() {
+        this._inputElement.nativeElement.focus();
+      }
+      _createChangeEvent(e) {
+        let c = new z();
+        return (c.source = this), (c.checked = e), c;
+      }
+      _getAnimationTargetElement() {
+        return this._inputElement?.nativeElement;
+      }
+      _animationClasses = {
+        uncheckedToChecked: "mdc-checkbox--anim-unchecked-checked",
+        uncheckedToIndeterminate: "mdc-checkbox--anim-unchecked-indeterminate",
+        checkedToUnchecked: "mdc-checkbox--anim-checked-unchecked",
+        checkedToIndeterminate: "mdc-checkbox--anim-checked-indeterminate",
+        indeterminateToChecked: "mdc-checkbox--anim-indeterminate-checked",
+        indeterminateToUnchecked: "mdc-checkbox--anim-indeterminate-unchecked",
+      };
+      ariaLabel = "";
+      ariaLabelledby = null;
+      ariaDescribedby;
+      ariaExpanded;
+      ariaControls;
+      ariaOwns;
+      _uniqueId;
+      id;
+      get inputId() {
+        return `${this.id || this._uniqueId}-input`;
+      }
+      required;
+      labelPosition = "after";
+      name = null;
+      change = new D();
+      indeterminateChange = new D();
+      value;
+      disableRipple;
+      _inputElement;
+      _labelElement;
+      tabIndex;
+      color;
+      disabledInteractive;
+      _onTouched = () => {};
+      _currentAnimationClass = "";
+      _currentCheckState = r.Init;
+      _controlValueAccessorChangeFn = () => {};
+      _validatorChangeFn = () => {};
+      constructor() {
+        s(se).load(he);
+        let e = s(new $("tabindex"), { optional: !0 });
+        (this._options = this._options || ze),
+          (this.color = this._options.color || ze.color),
+          (this.tabIndex = e == null ? 0 : parseInt(e) || 0),
+          (this.id = this._uniqueId = s(me).getId("mat-mdc-checkbox-")),
+          (this.disabledInteractive = this._options?.disabledInteractive ?? !1);
+      }
+      ngOnChanges(e) {
+        e.required && this._validatorChangeFn();
+      }
+      ngAfterViewInit() {
+        this._syncIndeterminate(this._indeterminate);
+      }
+      get checked() {
+        return this._checked;
+      }
+      set checked(e) {
+        e != this.checked &&
+          ((this._checked = e), this._changeDetectorRef.markForCheck());
+      }
+      _checked = !1;
+      get disabled() {
+        return this._disabled;
+      }
+      set disabled(e) {
+        e !== this.disabled &&
+          ((this._disabled = e), this._changeDetectorRef.markForCheck());
+      }
+      _disabled = !1;
+      get indeterminate() {
+        return this._indeterminate;
+      }
+      set indeterminate(e) {
+        let c = e != this._indeterminate;
+        (this._indeterminate = e),
+          c &&
+            (this._indeterminate
+              ? this._transitionCheckState(r.Indeterminate)
+              : this._transitionCheckState(
+                  this.checked ? r.Checked : r.Unchecked
+                ),
+            this.indeterminateChange.emit(this._indeterminate)),
+          this._syncIndeterminate(this._indeterminate);
+      }
+      _indeterminate = !1;
+      _isRippleDisabled() {
+        return this.disableRipple || this.disabled;
+      }
+      _onLabelTextChange() {
+        this._changeDetectorRef.detectChanges();
+      }
+      writeValue(e) {
+        this.checked = !!e;
+      }
+      registerOnChange(e) {
+        this._controlValueAccessorChangeFn = e;
+      }
+      registerOnTouched(e) {
+        this._onTouched = e;
+      }
+      setDisabledState(e) {
+        this.disabled = e;
+      }
+      validate(e) {
+        return this.required && e.value !== !0 ? { required: !0 } : null;
+      }
+      registerOnValidatorChange(e) {
+        this._validatorChangeFn = e;
+      }
+      _transitionCheckState(e) {
+        let c = this._currentCheckState,
+          t = this._getAnimationTargetElement();
+        if (
+          !(c === e || !t) &&
+          (this._currentAnimationClass &&
+            t.classList.remove(this._currentAnimationClass),
+          (this._currentAnimationClass =
+            this._getAnimationClassForCheckStateTransition(c, e)),
+          (this._currentCheckState = e),
+          this._currentAnimationClass.length > 0)
+        ) {
+          t.classList.add(this._currentAnimationClass);
+          let n = this._currentAnimationClass;
+          this._ngZone.runOutsideAngular(() => {
+            setTimeout(() => {
+              t.classList.remove(n);
+            }, 1e3);
+          });
+        }
+      }
+      _emitChangeEvent() {
+        this._controlValueAccessorChangeFn(this.checked),
+          this.change.emit(this._createChangeEvent(this.checked)),
+          this._inputElement &&
+            (this._inputElement.nativeElement.checked = this.checked);
+      }
+      toggle() {
+        (this.checked = !this.checked),
+          this._controlValueAccessorChangeFn(this.checked);
+      }
+      _handleInputClick() {
+        let e = this._options?.clickAction;
+        !this.disabled && e !== "noop"
+          ? (this.indeterminate &&
+              e !== "check" &&
+              Promise.resolve().then(() => {
+                (this._indeterminate = !1),
+                  this.indeterminateChange.emit(this._indeterminate);
+              }),
+            (this._checked = !this._checked),
+            this._transitionCheckState(this._checked ? r.Checked : r.Unchecked),
+            this._emitChangeEvent())
+          : ((this.disabled && this.disabledInteractive) ||
+              (!this.disabled && e === "noop")) &&
+            ((this._inputElement.nativeElement.checked = this.checked),
+            (this._inputElement.nativeElement.indeterminate =
+              this.indeterminate));
+      }
+      _onInteractionEvent(e) {
+        e.stopPropagation();
+      }
+      _onBlur() {
+        Promise.resolve().then(() => {
+          this._onTouched(), this._changeDetectorRef.markForCheck();
+        });
+      }
+      _getAnimationClassForCheckStateTransition(e, c) {
+        if (this._animationMode === "NoopAnimations") return "";
+        switch (e) {
+          case r.Init:
+            if (c === r.Checked)
+              return this._animationClasses.uncheckedToChecked;
+            if (c == r.Indeterminate)
+              return this._checked
+                ? this._animationClasses.checkedToIndeterminate
+                : this._animationClasses.uncheckedToIndeterminate;
+            break;
+          case r.Unchecked:
+            return c === r.Checked
+              ? this._animationClasses.uncheckedToChecked
+              : this._animationClasses.uncheckedToIndeterminate;
+          case r.Checked:
+            return c === r.Unchecked
+              ? this._animationClasses.checkedToUnchecked
+              : this._animationClasses.checkedToIndeterminate;
+          case r.Indeterminate:
+            return c === r.Checked
+              ? this._animationClasses.indeterminateToChecked
+              : this._animationClasses.indeterminateToUnchecked;
+        }
+        return "";
+      }
+      _syncIndeterminate(e) {
+        let c = this._inputElement;
+        c && (c.nativeElement.indeterminate = e);
+      }
+      _onInputClick() {
+        this._handleInputClick();
+      }
+      _onTouchTargetClick() {
+        this._handleInputClick(),
+          this.disabled || this._inputElement.nativeElement.focus();
+      }
+      _preventBubblingFromLabel(e) {
+        e.target &&
+          this._labelElement.nativeElement.contains(e.target) &&
+          e.stopPropagation();
+      }
+      static ɵfac = function (c) {
+        return new (c || o)();
+      };
+      static ɵcmp = u({
+        type: o,
+        selectors: [["mat-checkbox"]],
+        viewQuery: function (c, t) {
+          if ((c & 1 && (P(Ge, 5), P(Xe, 5)), c & 2)) {
+            let n;
+            N((n = V())) && (t._inputElement = n.first),
+              N((n = V())) && (t._labelElement = n.first);
+          }
+        },
+        hostAttrs: [1, "mat-mdc-checkbox"],
+        hostVars: 16,
+        hostBindings: function (c, t) {
+          c & 2 &&
+            (ee("id", t.id),
+            I("tabindex", null)("aria-label", null)("aria-labelledby", null),
+            O(t.color ? "mat-" + t.color : "mat-accent"),
+            l("_mat-animation-noopable", t._animationMode === "NoopAnimations")(
+              "mdc-checkbox--disabled",
+              t.disabled
+            )("mat-mdc-checkbox-disabled", t.disabled)(
+              "mat-mdc-checkbox-checked",
+              t.checked
+            )("mat-mdc-checkbox-disabled-interactive", t.disabledInteractive));
+        },
+        inputs: {
+          ariaLabel: [0, "aria-label", "ariaLabel"],
+          ariaLabelledby: [0, "aria-labelledby", "ariaLabelledby"],
+          ariaDescribedby: [0, "aria-describedby", "ariaDescribedby"],
+          ariaExpanded: [2, "aria-expanded", "ariaExpanded", f],
+          ariaControls: [0, "aria-controls", "ariaControls"],
+          ariaOwns: [0, "aria-owns", "ariaOwns"],
+          id: "id",
+          required: [2, "required", "required", f],
+          labelPosition: "labelPosition",
+          name: "name",
+          value: "value",
+          disableRipple: [2, "disableRipple", "disableRipple", f],
+          tabIndex: [
+            2,
+            "tabIndex",
+            "tabIndex",
+            (e) => (e == null ? void 0 : re(e)),
+          ],
+          color: "color",
+          disabledInteractive: [
+            2,
+            "disabledInteractive",
+            "disabledInteractive",
+            f,
+          ],
+          checked: [2, "checked", "checked", f],
+          disabled: [2, "disabled", "disabled", f],
+          indeterminate: [2, "indeterminate", "indeterminate", f],
+        },
+        outputs: {
+          change: "change",
+          indeterminateChange: "indeterminateChange",
+        },
+        exportAs: ["matCheckbox"],
+        features: [T([Ye, { provide: fe, useExisting: o, multi: !0 }]), W],
+        ngContentSelectors: $e,
+        decls: 15,
+        vars: 23,
+        consts: [
+          ["checkbox", ""],
+          ["input", ""],
+          ["label", ""],
+          ["mat-internal-form-field", "", 3, "click", "labelPosition"],
+          [1, "mdc-checkbox"],
+          [1, "mat-mdc-checkbox-touch-target", 3, "click"],
+          [
+            "type",
+            "checkbox",
+            1,
+            "mdc-checkbox__native-control",
+            3,
+            "blur",
+            "click",
+            "change",
+            "checked",
+            "indeterminate",
+            "disabled",
+            "id",
+            "required",
+            "tabIndex",
+          ],
+          [1, "mdc-checkbox__ripple"],
+          [1, "mdc-checkbox__background"],
+          [
+            "focusable",
+            "false",
+            "viewBox",
+            "0 0 24 24",
+            "aria-hidden",
+            "true",
+            1,
+            "mdc-checkbox__checkmark",
+          ],
+          [
+            "fill",
+            "none",
+            "d",
+            "M1.73,12.91 8.1,19.28 22.79,4.59",
+            1,
+            "mdc-checkbox__checkmark-path",
+          ],
+          [1, "mdc-checkbox__mixedmark"],
+          [
+            "mat-ripple",
+            "",
+            1,
+            "mat-mdc-checkbox-ripple",
+            "mat-focus-indicator",
+            3,
+            "matRippleTrigger",
+            "matRippleDisabled",
+            "matRippleCentered",
+          ],
+          [1, "mdc-label", 3, "for"],
+        ],
+        template: function (c, t) {
+          if (c & 1) {
+            let n = J();
+            M(),
+              a(0, "div", 3),
+              y("click", function (A) {
+                return x(n), v(t._preventBubblingFromLabel(A));
+              }),
+              a(1, "div", 4, 0)(3, "div", 5),
+              y("click", function () {
+                return x(n), v(t._onTouchTargetClick());
+              }),
+              i(),
+              a(4, "input", 6, 1),
+              y("blur", function () {
+                return x(n), v(t._onBlur());
+              })("click", function () {
+                return x(n), v(t._onInputClick());
+              })("change", function (A) {
+                return x(n), v(t._onInteractionEvent(A));
+              }),
+              i(),
+              h(6, "div", 7),
+              a(7, "div", 8),
+              G(),
+              a(8, "svg", 9),
+              h(9, "path", 10),
+              i(),
+              X(),
+              h(10, "div", 11),
+              i(),
+              h(11, "div", 12),
+              i(),
+              a(12, "label", 13, 2),
+              E(14),
+              i()();
+          }
+          if (c & 2) {
+            let n = te(2);
+            m("labelPosition", t.labelPosition),
+              d(4),
+              l("mdc-checkbox--selected", t.checked),
+              m("checked", t.checked)("indeterminate", t.indeterminate)(
+                "disabled",
+                t.disabled && !t.disabledInteractive
+              )("id", t.inputId)("required", t.required)(
+                "tabIndex",
+                t.disabled && !t.disabledInteractive ? -1 : t.tabIndex
+              ),
+              I("aria-label", t.ariaLabel || null)(
+                "aria-labelledby",
+                t.ariaLabelledby
+              )("aria-describedby", t.ariaDescribedby)(
+                "aria-checked",
+                t.indeterminate ? "mixed" : null
+              )("aria-controls", t.ariaControls)(
+                "aria-disabled",
+                t.disabled && t.disabledInteractive ? !0 : null
+              )("aria-expanded", t.ariaExpanded)("aria-owns", t.ariaOwns)(
+                "name",
+                t.name
+              )("value", t.value),
+              d(7),
+              m("matRippleTrigger", n)(
+                "matRippleDisabled",
+                t.disableRipple || t.disabled
+              )("matRippleCentered", !0),
+              d(),
+              m("for", t.inputId);
+          }
+        },
+        dependencies: [le, Ve],
+        styles: [
+          `.mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px)/2);margin:calc((var(--mdc-checkbox-state-layer-size, 40px) - var(--mdc-checkbox-state-layer-size, 40px))/2)}.mdc-checkbox:hover>.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-unselected-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity));background-color:var(--mdc-checkbox-unselected-hover-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox:hover>.mat-mdc-checkbox-ripple>.mat-ripple-element{background-color:var(--mdc-checkbox-unselected-hover-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox .mdc-checkbox__native-control:focus+.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-unselected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));background-color:var(--mdc-checkbox-unselected-focus-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox .mdc-checkbox__native-control:focus~.mat-mdc-checkbox-ripple .mat-ripple-element{background-color:var(--mdc-checkbox-unselected-focus-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox:active>.mdc-checkbox__native-control+.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-unselected-pressed-state-layer-opacity, var(--mat-sys-pressed-state-layer-opacity));background-color:var(--mdc-checkbox-unselected-pressed-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox:active>.mdc-checkbox__native-control~.mat-mdc-checkbox-ripple .mat-ripple-element{background-color:var(--mdc-checkbox-unselected-pressed-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox:hover .mdc-checkbox__native-control:checked+.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-selected-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity));background-color:var(--mdc-checkbox-selected-hover-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox:hover .mdc-checkbox__native-control:checked~.mat-mdc-checkbox-ripple .mat-ripple-element{background-color:var(--mdc-checkbox-selected-hover-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox .mdc-checkbox__native-control:focus:checked+.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-selected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));background-color:var(--mdc-checkbox-selected-focus-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mat-mdc-checkbox-ripple .mat-ripple-element{background-color:var(--mdc-checkbox-selected-focus-state-layer-color, var(--mat-sys-primary))}.mdc-checkbox:active>.mdc-checkbox__native-control:checked+.mdc-checkbox__ripple{opacity:var(--mdc-checkbox-selected-pressed-state-layer-opacity, var(--mat-sys-pressed-state-layer-opacity));background-color:var(--mdc-checkbox-selected-pressed-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox:active>.mdc-checkbox__native-control:checked~.mat-mdc-checkbox-ripple .mat-ripple-element{background-color:var(--mdc-checkbox-selected-pressed-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox .mdc-checkbox__native-control~.mat-mdc-checkbox-ripple .mat-ripple-element,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox .mdc-checkbox__native-control+.mdc-checkbox__ripple{background-color:var(--mdc-checkbox-unselected-hover-state-layer-color, var(--mat-sys-on-surface))}.mdc-checkbox .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit;z-index:1;width:var(--mdc-checkbox-state-layer-size, 40px);height:var(--mdc-checkbox-state-layer-size, 40px);top:calc((var(--mdc-checkbox-state-layer-size, 40px) - var(--mdc-checkbox-state-layer-size, 40px))/2);right:calc((var(--mdc-checkbox-state-layer-size, 40px) - var(--mdc-checkbox-state-layer-size, 40px))/2);left:calc((var(--mdc-checkbox-state-layer-size, 40px) - var(--mdc-checkbox-state-layer-size, 40px))/2)}.mdc-checkbox--disabled{cursor:default;pointer-events:none}@media(forced-colors: active){.mdc-checkbox--disabled{opacity:.5}}.mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid currentColor;border-radius:2px;background-color:rgba(0,0,0,0);pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms cubic-bezier(0.4, 0, 0.6, 1),border-color 90ms cubic-bezier(0.4, 0, 0.6, 1);-webkit-print-color-adjust:exact;color-adjust:exact;border-color:var(--mdc-checkbox-unselected-icon-color, var(--mat-sys-on-surface-variant));top:calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px)/2);left:calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px)/2)}.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,.mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:var(--mdc-checkbox-selected-icon-color, var(--mat-sys-primary));background-color:var(--mdc-checkbox-selected-icon-color, var(--mat-sys-primary))}.mdc-checkbox--disabled .mdc-checkbox__background{border-color:var(--mdc-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-checkbox__native-control:disabled:checked~.mdc-checkbox__background,.mdc-checkbox__native-control:disabled:indeterminate~.mdc-checkbox__background{background-color:var(--mdc-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mdc-checkbox:hover>.mdc-checkbox__native-control:not(:checked)~.mdc-checkbox__background,.mdc-checkbox:hover>.mdc-checkbox__native-control:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mdc-checkbox-unselected-hover-icon-color, var(--mat-sys-on-surface));background-color:rgba(0,0,0,0)}.mdc-checkbox:hover>.mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mdc-checkbox:hover>.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{border-color:var(--mdc-checkbox-selected-hover-icon-color, var(--mat-sys-primary));background-color:var(--mdc-checkbox-selected-hover-icon-color, var(--mat-sys-primary))}.mdc-checkbox__native-control:focus:focus:not(:checked)~.mdc-checkbox__background,.mdc-checkbox__native-control:focus:focus:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mdc-checkbox-unselected-focus-icon-color, var(--mat-sys-on-surface))}.mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background,.mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background{border-color:var(--mdc-checkbox-selected-focus-icon-color, var(--mat-sys-primary));background-color:var(--mdc-checkbox-selected-focus-icon-color, var(--mat-sys-primary))}.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox:hover>.mdc-checkbox__native-control~.mdc-checkbox__background,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__background{border-color:var(--mdc-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{background-color:var(--mdc-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms cubic-bezier(0.4, 0, 0.6, 1);color:var(--mdc-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mdc-checkbox__checkmark{color:CanvasText}}.mdc-checkbox--disabled .mdc-checkbox__checkmark,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:var(--mdc-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}@media(forced-colors: active){.mdc-checkbox--disabled .mdc-checkbox__checkmark,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:CanvasText}}.mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms cubic-bezier(0.4, 0, 0.6, 1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}.mdc-checkbox__mixedmark{width:100%;height:0;transform:scaleX(0) rotate(0deg);border-width:1px;border-style:solid;opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1);border-color:var(--mdc-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mdc-checkbox__mixedmark{margin:0 1px}}.mdc-checkbox--disabled .mdc-checkbox__mixedmark,.mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__mixedmark{border-color:var(--mdc-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}.mdc-checkbox--anim-unchecked-checked .mdc-checkbox__background,.mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__background,.mdc-checkbox--anim-checked-unchecked .mdc-checkbox__background,.mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__background{animation-duration:180ms;animation-timing-function:linear}.mdc-checkbox--anim-unchecked-checked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-unchecked-checked-checkmark-path 180ms linear;transition:none}.mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-unchecked-indeterminate-mixedmark 90ms linear;transition:none}.mdc-checkbox--anim-checked-unchecked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-checked-unchecked-checkmark-path 90ms linear;transition:none}.mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__checkmark{animation:mdc-checkbox-checked-indeterminate-checkmark 90ms linear;transition:none}.mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-checked-indeterminate-mixedmark 90ms linear;transition:none}.mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__checkmark{animation:mdc-checkbox-indeterminate-checked-checkmark 500ms linear;transition:none}.mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-checked-mixedmark 500ms linear;transition:none}.mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-unchecked-mixedmark 300ms linear;transition:none}.mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path{stroke-dashoffset:0}.mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark{transition:opacity 180ms cubic-bezier(0, 0, 0.2, 1),transform 180ms cubic-bezier(0, 0, 0.2, 1);opacity:1}.mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(-45deg)}.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark{transform:rotate(45deg);opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1)}.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(0deg);opacity:1}@keyframes mdc-checkbox-unchecked-checked-checkmark-path{0%,50%{stroke-dashoffset:29.7833385}50%{animation-timing-function:cubic-bezier(0, 0, 0.2, 1)}100%{stroke-dashoffset:0}}@keyframes mdc-checkbox-unchecked-indeterminate-mixedmark{0%,68.2%{transform:scaleX(0)}68.2%{animation-timing-function:cubic-bezier(0, 0, 0, 1)}100%{transform:scaleX(1)}}@keyframes mdc-checkbox-checked-unchecked-checkmark-path{from{animation-timing-function:cubic-bezier(0.4, 0, 1, 1);opacity:1;stroke-dashoffset:0}to{opacity:0;stroke-dashoffset:-29.7833385}}@keyframes mdc-checkbox-checked-indeterminate-checkmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(45deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-checked-checkmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(45deg);opacity:0}to{transform:rotate(360deg);opacity:1}}@keyframes mdc-checkbox-checked-indeterminate-mixedmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(-45deg);opacity:0}to{transform:rotate(0deg);opacity:1}}@keyframes mdc-checkbox-indeterminate-checked-mixedmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(315deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-unchecked-mixedmark{0%{animation-timing-function:linear;transform:scaleX(1);opacity:1}32.8%,100%{transform:scaleX(0);opacity:0}}.mat-mdc-checkbox{display:inline-block;position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0)}.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mat-mdc-checkbox-touch-target,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__native-control,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__ripple,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mat-mdc-checkbox-ripple::before,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__background,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-checkbox._mat-animation-noopable>.mat-internal-form-field>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__mixedmark{transition:none !important;animation:none !important}.mat-mdc-checkbox label{cursor:pointer}.mat-mdc-checkbox .mat-internal-form-field{color:var(--mat-checkbox-label-text-color, var(--mat-sys-on-surface));font-family:var(--mat-checkbox-label-text-font, var(--mat-sys-body-medium-font));line-height:var(--mat-checkbox-label-text-line-height, var(--mat-sys-body-medium-line-height));font-size:var(--mat-checkbox-label-text-size, var(--mat-sys-body-medium-size));letter-spacing:var(--mat-checkbox-label-text-tracking, var(--mat-sys-body-medium-tracking));font-weight:var(--mat-checkbox-label-text-weight, var(--mat-sys-body-medium-weight))}.mat-mdc-checkbox.mat-mdc-checkbox-disabled.mat-mdc-checkbox-disabled-interactive{pointer-events:auto}.mat-mdc-checkbox.mat-mdc-checkbox-disabled.mat-mdc-checkbox-disabled-interactive input{cursor:default}.mat-mdc-checkbox.mat-mdc-checkbox-disabled label{cursor:default;color:var(--mat-checkbox-disabled-label-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-checkbox label:empty{display:none}.mat-mdc-checkbox .mdc-checkbox__ripple{opacity:0}.mat-mdc-checkbox .mat-mdc-checkbox-ripple,.mdc-checkbox__ripple{top:0;left:0;right:0;bottom:0;position:absolute;border-radius:50%;pointer-events:none}.mat-mdc-checkbox .mat-mdc-checkbox-ripple:not(:empty),.mdc-checkbox__ripple:not(:empty){transform:translateZ(0)}.mat-mdc-checkbox-ripple .mat-ripple-element{opacity:.1}.mat-mdc-checkbox-touch-target{position:absolute;top:50%;left:50%;height:48px;width:48px;transform:translate(-50%, -50%);display:var(--mat-checkbox-touch-target-display, block)}.mat-mdc-checkbox .mat-mdc-checkbox-ripple::before{border-radius:50%}.mdc-checkbox__native-control:focus~.mat-focus-indicator::before{content:""}
+`,
+        ],
+        encapsulation: 2,
+        changeDetection: 0,
+      });
+    }
+    return o;
+  })();
+var je = (() => {
+  class o {
+    static ɵfac = function (c) {
+      return new (c || o)();
+    };
+    static ɵmod = g({ type: o });
+    static ɵinj = _({ imports: [qe, k, k] });
+  }
+  return o;
+})();
+var Be = (() => {
+  class o {
+    static ɵfac = function (c) {
+      return new (c || o)();
+    };
+    static ɵmod = g({ type: o });
+    static ɵinj = _({ imports: [k, k] });
+  }
+  return o;
+})();
+var qt = (() => {
+  class o {
+    constructor(e) {
+      (this.destroy$ = e),
+        (this.form = new ve({
+          email: new F("", [C.required, C.minLength(8)]),
+          phone: new F(7, [C.required, C.minLength(11)]),
+          description: new F(""),
+          car: new F("", [C.required]),
+        })),
+        (this.phoneMask = "0 (000) 000-00-00"),
+        (this.calcar = ""),
+        this.form.controls.phone.valueChanges
+          .pipe(
+            q((c) => !c),
+            j(this.destroy$)
+          )
+          .subscribe((c) => {
+            console.log(c),
+              this.form.controls.phone.patchValue(7, { emitEvent: !1 });
+          });
+    }
+    Submit() {
+      this.form.valid && (console.log(this.form.value), this.form.reset());
+    }
+    static {
+      this.ɵfac = function (c) {
+        return new (c || o)(Z(S));
+      };
+    }
+    static {
+      this.ɵcmp = u({
+        type: o,
+        selectors: [["app-application"]],
+        features: [T([S])],
+        decls: 32,
+        vars: 7,
+        consts: [
+          [1, "application-container"],
+          [1, "form", 3, "formGroup"],
+          [1, "\u0437\u0430\u044F\u0432\u043A\u0430"],
+          [1, "input-application"],
+          ["appearance", "outline", 1, "email-input"],
+          [
+            "matInput",
+            "",
+            "placeholder",
+            "Placeholder",
+            "required",
+            "",
+            "formControlName",
+            "email",
+          ],
+          [1, "application_number"],
+          [
+            "formControlName",
+            "phone",
+            "required",
+            "",
+            1,
+            "application-phone",
+            3,
+            "mask",
+          ],
+          [
+            "formControlName",
+            "car",
+            1,
+            "application-select",
+            3,
+            "ngModelChange",
+            "ngModel",
+          ],
+          ["value", "VOLVO"],
+          ["value", "mercedes"],
+          ["value", "audi"],
+          [1, "textarea-input"],
+          [1, "application-description"],
+          ["matInput", "", "formControlName", "description"],
+          [
+            "mat-stroked-button",
+            "",
+            1,
+            "application-submit",
+            3,
+            "click",
+            "disabled",
+          ],
+        ],
+        template: function (c, t) {
+          c & 1 &&
+            (a(0, "div", 0)(1, "form", 1)(2, "h1", 2),
+            b(3, "\u0417\u0430\u044F\u0432\u043A\u0430"),
+            i(),
+            a(4, "div", 3)(5, "mat-form-field", 4)(6, "mat-label"),
+            b(7, "email"),
+            i(),
+            h(8, "input", 5),
+            i()(),
+            a(9, "div", 3),
+            h(10, "label", 6)(11, "input", 7),
+            i(),
+            a(12, "div", 3)(13, "mat-form-field")(14, "mat-label"),
+            b(
+              15,
+              "\u0432\u044B\u0431\u0435\u0440\u0438 \u043E\u043F\u0446\u0438\u044E"
+            ),
+            i(),
+            a(16, "mat-select", 8),
+            ae("ngModelChange", function (p) {
+              return ie(t.calcar, p) || (t.calcar = p), p;
+            }),
+            a(17, "mat-option", 9),
+            b(18, "VOLVO"),
+            i(),
+            a(19, "mat-option", 10),
+            b(20, "Mercedes"),
+            i(),
+            a(21, "mat-option", 11),
+            b(22, "Audi"),
+            i()()()(),
+            a(23, "div", 3)(24, "mat-form-field", 12)(25, "mat-label", 13),
+            b(26, "only for fun "),
+            i(),
+            h(27, "textarea", 14),
+            i()(),
+            a(28, "section")(29, "div")(30, "button", 15),
+            y("click", function () {
+              return t.Submit();
+            }),
+            b(31),
+            i()()()()()),
+            c & 2 &&
+              (d(),
+              m("formGroup", t.form),
+              d(10),
+              m("mask", t.phoneMask),
+              d(5),
+              oe("ngModel", t.calcar),
+              d(14),
+              l("enable", t.form.valid),
+              m("disabled", t.form.invalid),
+              d(),
+              ce(
+                " ",
+                t.calcar === "VOLVO"
+                  ? "\u041A\u041B\u041E\u0423\u041D"
+                  : "submit",
+                " "
+              ));
+        },
+        dependencies: [
+          de,
+          Me,
+          ge,
+          ue,
+          _e,
+          xe,
+          Ie,
+          Ee,
+          ye,
+          Ce,
+          Te,
+          we,
+          Fe,
+          Ae,
+          Se,
+          Ne,
+          Pe,
+          je,
+          Oe,
+          De,
+          Re,
+          Be,
+          ke,
+          be,
+        ],
+        styles: [
+          '@charset "UTF-8";.application-container[_ngcontent-%COMP%]{flex-direction:column;display:flex;height:1400px;width:100%;background-color:#383434}.form[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center;flex-direction:column}.\\437\\430\\44f\\432\\43a\\430[_ngcontent-%COMP%] {color:#fff;position:relative;margin-top:90px}.input-application[_ngcontent-%COMP%]{margin-top:40px}.application-phone[_ngcontent-%COMP%]{border:none;outline:none;background:transparent;border-bottom:solid white 3px;color:#fff;font-size:20px;width:210px}.application-select[_ngcontent-%COMP%]{color:#000;text-align:start;font-size:18px;text-transform:uppercase}.application-description[_ngcontent-%COMP%]{font-size:20px;color:#ae08b9}.application-submit[_ngcontent-%COMP%]{color:#000;border-radius:12px;width:150px;font-size:13px;background-color:#b53434}.enable[_ngcontent-%COMP%]{background-color:#3a833a}.enable[_ngcontent-%COMP%]:hover{color:#fff;box-shadow:inset 0 0 20px #ffffff80,0 0 20px #fff3;outline-color:#fff0;outline-offset:15px;text-shadow:1px 1px 2px #ffffff}.textarea-input[_ngcontent-%COMP%]{width:400px}',
+        ],
+      });
+    }
+  }
+  return o;
+})();
+export { qt as ApplicationComponent };
