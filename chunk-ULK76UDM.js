@@ -1,8 +1,14 @@
-import { b as z } from "./chunk-DNOQGVMG.js";
-import { c as A, d as b, f as C, g as _, h as y } from "./chunk-ZSSD5RUB.js";
+import { b as z } from "./browser/chunk-DNOQGVMG.js";
+import {
+  c as A,
+  d as b,
+  f as C,
+  g as _,
+  h as y,
+} from "./browser/chunk-ZSSD5RUB.js";
 import { a as j, b as T } from "./browser/chunk-Z4NBKBPH.js";
-import "./chunk-2KGD3LIW.js";
-import "./chunk-D63QER6G.js";
+import "./browser/chunk-2KGD3LIW.js";
+import "./browser/chunk-D63QER6G.js";
 import {
   Bb as i,
   Bc as p,

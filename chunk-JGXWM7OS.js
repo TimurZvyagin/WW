@@ -1,5 +1,5 @@
 import { b as Pe } from "./chunk-CHXUGZBM.js";
-import { a as be, b as ke } from "./browser/chunk-Z4NBKBPH.js";
+import { a as be, b as ke } from "./chunk-Z4NBKBPH.js";
 import {
   k as Fe,
   l as we,
@@ -9,7 +9,7 @@ import {
   p as Re,
   q as De,
   r as Oe,
-} from "./browser/chunk-RZRL73QH.js";
+} from "./chunk-RZRL73QH.js";
 import {
   a as pe,
   b as ue,
