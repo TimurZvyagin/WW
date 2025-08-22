@@ -5,13 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class SayhiMessageService {
-  private genershow = new BehaviorSubject<boolean>(false); //BehaviorSubject хранит в себе был ли открыт баннер и на него можно подписаться в любой момнет
+  private genershow = new BehaviorSubject<boolean>(false); //BehaviorSubject хранит в себе данные был ли открыт баннер и на него можно подписаться в любой момнет
 
   constructor() {
-    const wereshow = sessionStorage.getItem('wereopen');
+    const wereshow = sessionStorage.getItem('');
     if (!wereshow) {
       this.showbanner();
-      sessionStorage.setItem('wereopen', 'true');
+      sessionStorage.setItem('', '');
     }
   }
   get state$() {
