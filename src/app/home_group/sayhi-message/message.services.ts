@@ -11,7 +11,7 @@ export class SayhiMessageService {
     const wereshow = sessionStorage.getItem('');
     if (!wereshow) {
       this.showbanner();
-      sessionStorage.setItem('', '');
+      sessionStorage.setItem('', 'true');
     }
   }
   get state$() {
@@ -22,6 +22,6 @@ export class SayhiMessageService {
     this.genershow.next(true);
     setTimeout(() => {
       this.genershow.next(false);
-    }, 10000);
+    }, 4000);
   }
 }

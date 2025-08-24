@@ -1,7 +1,7 @@
-<div *ngIf="showme" class="sayhi-banner">
+<div [@fadeOut]="showme ? 'visible' : 'hidden'" class="sayhi-banner">
   <div class="sayhi-wrapper">
     <div class="good_wishes">
-      <h1>привет mazafucker</h1>
+      <h1>привет</h1>
       <h1>добро пожаловать на мой сайт</h1>
     </div>
   </div>
