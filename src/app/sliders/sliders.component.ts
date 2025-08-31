@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 const fadeInOut = trigger('fadeInOut', [
   state('open', style({ opacity: 1 })),
   state('close', style({ opacity: 0 })),
-  transition('open => close', [animate('1s ease-out')]),
-  transition('close => open', [animate('1s ease-out')]),
+  transition('open => close', [animate('3s ease-out')]),
+  transition('close => open', [animate('3s ease-out')]),
 ]);
 
 @Component({
@@ -43,11 +43,11 @@ export class SlidersComponent {
   public isShowU = true;
 
   private changeSlide(newIndex: number) {
-    this.isShowU = false;
+    this.isShowU = false; // вырубает текс т
 
     setTimeout(() => {
-      this.currentIndex = newIndex;
-      this.isShowU = true;
+      this.currentIndex = newIndex; // меняет на новый индекс
+      this.isShowU = true; // снова показывает текст
     }, 500);
   }
 
