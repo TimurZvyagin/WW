@@ -38,10 +38,9 @@
 .dots-container {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 40px;
+  gap: 60px;
+  left: 40%;
 }
 
 .dot {

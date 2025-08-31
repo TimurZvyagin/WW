@@ -50,6 +50,7 @@ export class SlidersComponent {
       this.isShowU = true;
     }, 500);
   }
+
   goToSlide(index: number) {
     if (index !== this.currentIndex) {
       this.changeSlide(index);

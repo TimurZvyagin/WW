@@ -1,6 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { SayhiMessageService } from './message.services';
 import { CommonModule } from '@angular/common';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+
+const fadeOut = trigger('fadeOut', [
+  state('visible', style({ opacity: 1 })),
+  state('hidden', style({ opacity: 0 })),
+  transition('visible => hidden', [animate('2s ease-out')]),
+]);
 
 @Component({
   styleUrl: './message.component.scss',
@@ -8,6 +21,7 @@ import { CommonModule } from '@angular/common';
   selector: 'sayhi-message',
   templateUrl: './message.component.html',
   imports: [CommonModule],
+  animations: [fadeOut],
 })
 export class SayhiMessageComponent implements OnInit {
   showme = false;

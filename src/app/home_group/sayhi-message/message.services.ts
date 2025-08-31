@@ -5,23 +5,24 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class SayhiMessageService {
-  private genershow = new BehaviorSubject<boolean>(false); //BehaviorSubject хранит в себе был ли открыт баннер и на него можно подписаться в любой момнет
+  private bannerstate = new BehaviorSubject<boolean>(false); //BehaviorSubject хранит в себе был ли открыт баннер и на него можно подписаться в любой момнет
 
   constructor() {
-    const wereshow = sessionStorage.getItem('wereopen');
+    const wereshow = sessionStorage.getItem('');
     if (!wereshow) {
       this.showbanner();
-      sessionStorage.setItem('wereopen', 'true');
+      sessionStorage.setItem('', 'true');
     }
   }
   get state$() {
-    return this.genershow.asObservable(); //подписка
+    return this.bannerstate.asObservable(); //подписка
   }
 
   private showbanner() {
-    this.genershow.next(true);
+    this.bannerstate.next(true);
     setTimeout(() => {
-      this.genershow.next(false);
-    }, 10000);
+      this.bannerstate.next(false);
+    }, 3000);
   }
 }
+// почему баннер долго висит и не закрывается
