@@ -25,4 +25,3 @@ export class SayhiMessageService {
     }, 3000);
   }
 }
-// почему баннер долго висит и не закрывается
