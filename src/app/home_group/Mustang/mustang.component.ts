@@ -13,7 +13,6 @@ import { ModalMustangComponent } from 'src/app/modal-must/modal-mustang.componen
 })
 export class MustangComponent {
   constructor(private dialog: MatDialog) {}
-
   setActive(event: MouseEvent): void {
     const allImages = document.querySelectorAll('.carca-galere');
     const clickedImage = event.currentTarget as HTMLElement;
@@ -23,7 +22,6 @@ export class MustangComponent {
     // Добавляем класс active только к выбранной картинке
     clickedImage.classList.add('active');
   }
-
   openDialog(): void {
     this.dialog
       .open<ModalMustangComponent, null, boolean>(ModalMustangComponent, {

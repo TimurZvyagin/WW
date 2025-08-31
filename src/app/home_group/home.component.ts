@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SlidersComponent } from '../sliders/sliders.component';
 import { Router } from '@angular/router';
-import { SayhiMessageComponent } from './sayhi-message/message.component';
 import { MatButtonModule } from '@angular/material/button';
+import { SayhiMessageComponent } from './sayhi-message/message.component';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     SlidersComponent,
-    SayhiMessageComponent,
     MatButtonModule,
+    SayhiMessageComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

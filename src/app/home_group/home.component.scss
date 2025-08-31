@@ -1,7 +1,7 @@
 .back {
   display: flex;
   width: 100%;
-  height: 1200px;
+  height: 1000px;
   position: relative;
 }
 .video-bg {
@@ -80,15 +80,20 @@
 }
 .application-inner {
   display: flex;
-  justify-content: center;
 }
 .application_recomindation {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
   font-family: "Monaco", sans-serif;
   font-size: 30px;
   color: black;
 }
 .application-button {
   margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  margin-left: 20px;
   font-size: 18px;
   width: 450px;
   height: 80px;
@@ -102,6 +107,7 @@
   background-color: #6200ea;
 }
 .app-lication {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
