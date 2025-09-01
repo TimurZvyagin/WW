@@ -8,10 +8,10 @@ export class SayhiMessageService {
   private bannerstate = new BehaviorSubject<boolean>(false); //BehaviorSubject хранит в себе был ли открыт баннер и на него можно подписаться в любой момнет
 
   constructor() {
-    const wereshow = sessionStorage.getItem('');
+    const wereshow = sessionStorage.getItem('wereopen');
     if (!wereshow) {
       this.showbanner();
-      sessionStorage.setItem('', 'true');
+      sessionStorage.setItem('wereopen', 'true');
     }
   }
   get state$() {

@@ -80,11 +80,11 @@
 }
 .application-inner {
   display: flex;
+  justify-content: center;
 }
 .application_recomindation {
   margin-right: 20px;
   margin-left: 20px;
-  text-align: center;
   font-family: "Monaco", sans-serif;
   font-size: 30px;
   color: black;
