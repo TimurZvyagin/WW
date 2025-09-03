@@ -11,21 +11,23 @@ import {
 
 const fadeOut = trigger('fadeOut', [
   state('visible', style({ opacity: 1 })),
-  state('hidden', style({ opacity: 0 })),
-  transition('visible => hidden', [animate('2s ease-out')]),
+  state(
+    'hidden',
+    style({ opacity: 0, height: 0, position: 'absolute', overflow: 'hidden' })
+  ),
+  transition('visible => hidden', [animate('2.5s ease-out')]),
 ]);
 
 @Component({
   styleUrl: './message.component.scss',
   standalone: true,
-  selector: 'sayhi-message',
+  selector: 'say-hi-message',
   templateUrl: './message.component.html',
   imports: [CommonModule],
   animations: [fadeOut],
 })
 export class SayhiMessageComponent implements OnInit {
   showme = false;
-
   constructor(private banner: SayhiMessageService) {}
 
   ngOnInit(): void {

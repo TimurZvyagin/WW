@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { SlidersComponent } from '../sliders/sliders.component';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { SayhiMessageComponent } from './sayhi-message/message.component';
+import { SayhiMessageComponent } from './say-hi-message/message.component';
 
 @Component({
   selector: 'app-home',
