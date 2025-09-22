@@ -19,9 +19,7 @@ bootstrapApplication(AppComponent, {
     ),
     appConfig.providers || [],
     provideAnimations(),
-    provideAnimationsAsync(),
     provideEnvironmentNgxMask(),
-    provideAnimationsAsync(),
     provideAnimationsAsync(),
   ],
 }).catch((err) => console.error(err));

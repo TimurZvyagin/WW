@@ -27,7 +27,8 @@ const fadeOut = trigger('fadeOut', [
   animations: [fadeOut],
 })
 export class SayhiMessageComponent implements OnInit {
-  showme = false;
+  showme: boolean = true;
+
   constructor(private banner: SayhiMessageService) {}
 
   ngOnInit(): void {

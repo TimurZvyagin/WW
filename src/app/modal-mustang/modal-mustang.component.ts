@@ -1,4 +1,4 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import {
   FormGroup,
@@ -10,9 +10,10 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   styleUrl: './modal-mustang.component.scss',
@@ -28,9 +29,10 @@ import { ToastrService } from 'ngx-toastr';
     ReactiveFormsModule,
   ],
 })
-export class ModalMustangComponent implements OnDestroy, OnInit {
-  private destroy$ = new Subject<void>(); // Создаем Subject для отписки
+export class ModalMustangComponent implements OnInit {
   object = Object;
+  private readonly destroyRef = inject(DestroyRef)
+ 
 
   form = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -43,14 +45,14 @@ export class ModalMustangComponent implements OnDestroy, OnInit {
   constructor(
     private readonly toastr: ToastrService,
     public dialogRef: MatDialogRef<ModalMustangComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: null
+    @Inject(MAT_DIALOG_DATA) public data: null,
   ) {}
 
   ngOnInit(): void {
     // Подписка на изменения поля "option"
     this.form
       .get('optionCar')
-      ?.valueChanges.pipe(takeUntil(this.destroy$))
+      ?.valueChanges.pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((value: string | null) => {
         const controlModel = this.form.get('optionModel');
 
@@ -90,8 +92,4 @@ export class ModalMustangComponent implements OnDestroy, OnInit {
     }
   }
 
-  ngOnDestroy(): void {
-    this.destroy$.next(); // Завершаем подписки
-    this.destroy$.complete();
-  }
 }

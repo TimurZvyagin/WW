@@ -37,7 +37,7 @@ export class SlidersComponent {
       description: 'Или таким ',
       img: 'assets/img/matrix.png',
     },
-  ];
+  ];  
 
   currentIndex = 0;
   public isShowU = true;

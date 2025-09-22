@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ModalMustangComponent } from 'src/app/modal-must/modal-mustang.component';
+import { ModalMustangComponent } from 'src/app/modal-mustang/modal-mustang.component';
 
 @Component({
   selector: 'app-mustang',

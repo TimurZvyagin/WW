@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, delay, Observable, of } from 'rxjs';
+import { BehaviorSubject, delay, Observable, of, } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
 
 @Injectable({
   providedIn: 'root',
@@ -21,8 +23,8 @@ export class SayhiMessageService {
   private showbanner() {
     this.bannerState$.next(true);
 
-    of(null)
-      .pipe(delay(3000))
+        of(null)
+        .pipe(delay(3000), takeUntilDestroyed())
       .subscribe(() => {
         this.bannerState$.next(false);
       });
@@ -31,3 +33,4 @@ export class SayhiMessageService {
     // }, 3000);
   }
 }
+

@@ -21,6 +21,6 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   Application() {
-    this.router.navigate(['/application']);
+    this.router.navigate(['/application'])
   }
 }
