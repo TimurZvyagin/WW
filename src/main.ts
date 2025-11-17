@@ -22,4 +22,5 @@ bootstrapApplication(AppComponent, {
     provideEnvironmentNgxMask(),
     provideAnimationsAsync(),
   ],
+
 }).catch((err) => console.error(err));

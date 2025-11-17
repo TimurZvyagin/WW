@@ -32,21 +32,20 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class ModalMustangComponent implements OnInit {
   object = Object;
   private readonly destroyRef = inject(DestroyRef)
- 
-
-  form = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    optionCar: new FormControl('', [Validators.required]),
-    optionModel: new FormControl({ value: '', disabled: true }, [
-      Validators.required,
-    ]),
-  });
-
   constructor(
     private readonly toastr: ToastrService,
     public dialogRef: MatDialogRef<ModalMustangComponent>,
     @Inject(MAT_DIALOG_DATA) public data: null,
   ) {}
+ 
+
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    optionCar: new FormControl('', [Validators.required]),
+    optionModel: new FormControl({value:'', disabled: true }, [
+      Validators.required,
+    ]),
+  });
 
   ngOnInit(): void {
     // Подписка на изменения поля "option"
@@ -83,7 +82,7 @@ export class ModalMustangComponent implements OnInit {
   onSubmit(): void {
     if (this.form.get('optionCar')?.value === 'VOLVO') {
       console.log(null);
-
+      
       this.toastr.error('Мы не обслуживаем бездарей');
     } else {
       this.dialogRef.close(this.form.value);
@@ -93,3 +92,29 @@ export class ModalMustangComponent implements OnInit {
   }
 
 }
+
+
+
+
+//  function chisla(v:number){
+//   return function drugie(num:number){
+//     return v + num
+//   }
+// }
+// const ten = chisla(10)
+// console.log(ten(10))
+
+const brokenLinks=['vk','youtube','facebook']
+
+// const goodLinks = (linkArray:string[]) => {
+//   const correctLinks: string[]=[]
+//   linkArray.forEach((brokenLinks: string) => correctLinks.push ('https://' + brokenLinks + '.com' ));
+//   return correctLinks
+// }
+// console.log(goodLinks(brokenLinks))
+
+const fixedLinks=(linkArray:string[])=>linkArray.map(link =>`https://${link}.com`)
+
+console.log(fixedLinks(brokenLinks))
+
+

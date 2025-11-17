@@ -1,68 +1,68 @@
-.sliders-container {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  display: flex;
-}
-.photo {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 60%;
-}
-.container_text {
-  position: relative;
-  background-color: darkslateblue;
-  width: 40%;
-  height: 100%;
-  flex-wrap: wrap;
-}
-.sliders_text {
-  margin-top: 200px;
-  margin-left: 20px;
-  font-family: "Monaco", sans-serif;
-  font-size: 25px;
-  align-items: center;
-  color: #ffffff;
-}
-.sliders-button {
-  border: none;
-  text-decoration: none;
-  height: 30px;
-  width: 60px;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-}
-.dots-container {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 65px;
-  left: 40%;
-}
+// .sliders-container {
+//   position: relative;
+//   width: 100%;
+//   height: 600px;
+//   overflow: hidden;
+//   display: flex;
+// }
+// .photo {
+//   position: absolute;
+//   right: 0;
+//   height: 100%;
+//   width: 60%;
+// }
+// .container_text {
+//   position: relative;
+//   background-color: darkslateblue;
+//   width: 40%;
+//   height: 100%;
+//   flex-wrap: wrap;
+// }
+// .sliders_text {
+//   margin-top: 200px;
+//   margin-left: 20px;
+//   font-family: "Monaco", sans-serif;
+//   font-size: 25px;
+//   align-items: center;
+//   color: #ffffff;
+// }
+// .sliders-button {
+//   border: none;
+//   text-decoration: none;
+//   height: 30px;
+//   width: 60px;
+//   position: absolute;
+//   top: 70%;
+//   left: 50%;
+// }
+// .dots-container {
+//   position: absolute;
+//   bottom: 20px;
+//   display: flex;
+//   gap: 65px;
+//   left: 40%;
+// }
 
-.dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: gray;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+// .dot {
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+//   background-color: gray;
+//   border: none;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+// }
 
-.dot.active {
-  background-color: white; /* Активная точка */
-}
+// .dot.active {
+//   background-color: white; /* Активная точка */
+// }
 
-/*<div class="sliders-container">
-  <div class="continer-text">
-    <h1 class="text">{{ slides[currentIndex].description }}</h1>
-    <button class="sliders-button" (click)="nextSlide()">Next</button>
-  </div>
-  <div class="image-container">
-    <img class="photo" [src]="slides[currentIndex].img" [class.fade]="true" />
-  </div>
-</div>*/
+// /*<div class="sliders-container">
+//   <div class="continer-text">
+//     <h1 class="text">{{ slides[currentIndex].description }}</h1>
+//     <button class="sliders-button" (click)="nextSlide()">Next</button>
+//   </div>
+//   <div class="image-container">
+//     <img class="photo" [src]="slides[currentIndex].img" [class.fade]="true" />
+//   </div>
+// </div>*/

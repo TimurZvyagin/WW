@@ -7,14 +7,16 @@
     имеется
   </h2>
   <video
+   #backgroundVideo
+   playsinline
     preload="auto"
-    loop
+    loop 
     autoplay
+    
     muted
-    class="video-bg"
-    src="assets/img/around_world.mp4"
-    type="myVideo"
-  ></video>
+    class="video-bg">
+   <source src="assets/img/around_world.mp4" type="video/mp4">
+  </video>
   <div class="back-fon"></div>
   <div class="wrapper-container">
     <div class="wrapper-inner">
@@ -33,17 +35,20 @@
     </div>
   </div>
 </div>
-<sliders></sliders>
-<div class="application-container">
+
+
+<skill-slide></skill-slide>
+<!-- <sliders></sliders> -->
+<!-- <div class="application-container">
   <div class="application-inner">
     <h1 class="application_recomindation">
       Не оставайся в дураках и отправляй свою заявку на обучение
       кибербезопасности, после ты сможешь взламывать аккаунты бедолаг
     </h1>
-  </div>
+  </div> -->
   <div class="app-lication">
     <button mat-flat-button (click)="Application()"  class="application-button">
       Заявка
     </button>
   </div>
-</div>
+
