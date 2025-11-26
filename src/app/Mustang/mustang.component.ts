@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ModalMustangComponent } from 'src/app/modal-mustang/modal-mustang.component';
+import { ModalMustangComponent } from 'src/app/Mustang/modal-mustang/modal-mustang.component';
 
 @Component({
   selector: 'app-mustang',
@@ -12,7 +12,7 @@ import { ModalMustangComponent } from 'src/app/modal-mustang/modal-mustang.compo
   styleUrl: './mustang.component.scss',
 })
 export class MustangComponent {
-  constructor(private dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
   setActive(event: MouseEvent): void {
     const allImages = document.querySelectorAll('.carca-galere');
     const clickedImage = event.currentTarget as HTMLElement;

@@ -10,21 +10,14 @@ export const routes: Routes = [
   {
     path: 'mustang',
     loadComponent: () =>
-      import('./home_group/Mustang/mustang.component').then(
+      import('./Mustang/mustang.component').then(
         (c) => c.MustangComponent
       ),
   },
   {
     path: 'lays',
     loadComponent: () =>
-      import('./home_group/Lays/lays.component').then((c) => c.LaysComponent),
-  },
-  {
-    path: 'application',
-    loadComponent: () =>
-      import('./big-application/application.component').then(
-        (c) => c.ApplicationComponent
-      ),
+      import('./Lays/lays.component').then((c) => c.LaysComponent),
   },
 
   {

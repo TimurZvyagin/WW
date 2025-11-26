@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, Inject, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -17,6 +17,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Dialog, DialogRef } from '@angular/cdk/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-application',
@@ -49,10 +51,12 @@ export class ApplicationComponent {
     email: new FormControl('', [Validators.required, Validators.minLength(8)]),
     phone: new FormControl(7, [Validators.required, Validators.minLength(11)]),
     description: new FormControl(''),
-    car: new FormControl('', [Validators.required]),
+    dev: new FormControl('', [Validators.required]),
   });
   phoneMask = '0 (000) 000-00-00';
-  constructor() {
+
+  constructor(public dialogRef: MatDialogRef<ApplicationComponent>,@Inject(MAT_DIALOG_DATA) public data: null,) {
+    
     this.form.controls.phone.valueChanges
       .pipe(
         filter((value) => !value),takeUntilDestroyed(this.destroyRef)
@@ -65,9 +69,8 @@ export class ApplicationComponent {
   }
   Submit(): void {
     if (this.form.valid) {
-      console.log(this.form.value);
-      this.form.reset();
+      this.dialogRef.close(this.form.value)
     }
   }
-  calcar: string = '';
+  kazual: string = '';
 }

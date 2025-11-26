@@ -104,7 +104,7 @@ export class ModalMustangComponent implements OnInit {
 // const ten = chisla(10)
 // console.log(ten(10))
 
-const brokenLinks=['vk','youtube','facebook']
+// const brokenLinks=['vk','youtube','facebook']
 
 // const goodLinks = (linkArray:string[]) => {
 //   const correctLinks: string[]=[]
@@ -113,8 +113,8 @@ const brokenLinks=['vk','youtube','facebook']
 // }
 // console.log(goodLinks(brokenLinks))
 
-const fixedLinks=(linkArray:string[])=>linkArray.map(link =>`https://${link}.com`)
+// const fixedLinks=(linkArray:string[])=>linkArray.map(link =>`https://${link}.com`)
 
-console.log(fixedLinks(brokenLinks))
+// console.log(fixedLinks(brokenLinks))
 
 

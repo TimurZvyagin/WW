@@ -1,24 +1,33 @@
 .application-container {
-  flex-direction: column;
   display: flex;
   width: 100%;
-  background-color: rgb(56, 52, 52);
-  height: auto;
-  
+  background-color: #323232;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .form {
+  padding-top: 20px;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
 .заявка {
   color: white;
-  position: relative;
-  margin-top: 90px;
+  width: 300px;
+  margin-top: -20px;
 }
-.input-application {
-  margin-top: 40px;
+.заявка2{
+  display: flex;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 20px;
+}
+.email-input{
+  width: 300px;
 }
 .application-phone {
   border: none;
@@ -27,30 +36,27 @@
   border-bottom: solid white 3px;
   color: white;
   font-size: 20px;
-  width: 210px;
+  width: 295px;
 }
 .application-select {
   color: black;
   text-align: start;
   font-size: 18px;
-  text-transform: uppercase;
+  width: 300px;
 }
 .application-description {
   font-size: 20px;
   color: rgb(174, 8, 185);
+  max-height: 200px;  
 }
 .application-submit {
   color: black;
   border-radius: 12px;
-  width: 150px;
+  width: 300px;
   font-size: 13px;
   background-color: rgb(181, 52, 52);
-  margin-bottom: 225px;
+  height: 40px;
 }
-// .application-submit:hover {
-//   color: white;
-//   background-color: rgb(20, 76, 125);
-// }
 
 .enable {
   background-color: rgb(58, 131, 58);
@@ -64,13 +70,6 @@
   text-shadow: 1px 1px 2px #ffffff;
 }
 
-/*.application_number {
-  font-size: 20px;
-  color: white;
-  position: relative;
-  top: 20px;
-  right: 100px;
-}*/
 .textarea-input {
-  width: 400px;
+  width: 300px;
 }
