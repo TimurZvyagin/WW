@@ -1,0 +1,25 @@
+.sayhi-banner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(44, 44, 44);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  &.hidden-after {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+  }
+}
+.good_wishes {
+  font-size: 40px;
+  color: rgb(227, 217, 217);
+}
+.sayhi-wrapper {
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
