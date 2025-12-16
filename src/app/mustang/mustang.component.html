@@ -1,0 +1,42 @@
+<div class="car-galerei">
+  <h1 id="text">{{displayText}}</h1>
+  <div class="car-container">
+    <div class="carca-galere active" (click)="setActive($event)">
+      <img src="assets/img/ford-mustang.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/baxa-m3.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/volvo-edition.png" alt="" />
+    </div>
+    <div class="carca-galere" (click)="setActive($event)">
+      <img src="assets/img/Merceds-GTR.png" alt="" />
+    </div>
+  </div>
+</div>
+
+<div class="video-baxa-ix">
+  <div class="video-container"> 
+    <div class="video-wrapper">
+      <video  preload="auto"playsinline class="video" loop autoplay muted>
+        <source src="assets/img/video-baxa.mp4" type="video/mp4"> 
+      </video>
+    </div>
+  </div>
+  
+  <div class="video-container"> 
+    <div class="video-wrapper">
+      <video  preload="auto"playsinline loop autoplay muted class="video" >
+        <source src="assets/img/video-car.mp4" type="video/mp4"> 
+      </video>
+    </div>
+  </div>
+</div>
+
+
+<div class="car-application">
+  <button mat-button class="button-mustang" (click)="openDialog()">
+    Выбери тачку
+  </button>
+</div>

@@ -1,0 +1,33 @@
+<div class="modal-application">
+  <form class="second_form" [formGroup]="form">
+    <mat-form-field class="modal-input">
+      <mat-label>say my name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="form-option">
+      <mat-select required formControlName="optionCar" placeholder="Car option">
+        <mat-option *ngFor="let car of object.keys(allModels)" [value]="car">{{
+          car
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form-option">
+      <mat-select formControlName="optionModel" placeholder="option Models">
+        <mat-option
+          *ngFor="let models of availableModels"
+          [value]="models"
+          [disabled]=""
+          >{{ models }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <button
+      [disabled]="form.invalid"
+      class="modal-button-appliction"
+      mat-button
+      (click)="onSubmit()"
+    >
+      submit
+    </button>
+  </form>
+</div>

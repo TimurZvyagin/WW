@@ -1,0 +1,61 @@
+.container{
+    background-color: rgb(87, 87, 87);
+    display: flex;
+    height: 900px;
+}
+.ineer{
+    font-size: 30px;
+    color: blue;
+    margin-top: 100px;
+
+}
+.sliders{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+}
+.group{
+    display: flex;
+    animation: spin 15s infinite linear;
+    justify-content: center;
+    gap:1em;
+    margin-top: 10px;
+    padding-left:1em;
+}
+.slide-1{
+    height: 50vh;
+    min-width: 50vw;
+    background-color: rgb(80, 128, 128);
+    scroll-snap-align: start;
+}
+.slide-2{
+    height: 50vh;
+    min-width: 50vw;
+    background-color: rgb(0, 0, 0);
+    scroll-snap-align: start;
+}
+.slide-3{
+    height: 50vh;
+    min-width: 50vw;
+    background-color: rgb(168, 167, 106);
+    scroll-snap-align: start;
+}
+.slide-4{
+    height: 50vh;
+    min-width: 50vw;
+    background-color: rgb(107, 72, 167);
+    scroll-snap-align: start;
+}
+.slide-5{
+    height: 50vh;
+    min-width: 50vw;
+    background-color: rgb(176, 26, 89);
+    scroll-snap-align: start;
+}
+
+@keyframes spin {
+    from{translate:0}
+    to {translate:-100%;}
+
+}
