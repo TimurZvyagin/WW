@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/new-profect",
+    "public": "dist/new-profect/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
