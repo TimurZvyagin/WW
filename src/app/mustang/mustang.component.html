@@ -1,16 +1,17 @@
 <div class="car-galerei">
   <h1 id="text">{{displayText}}</h1>
+  
   <div class="car-container">
-    <div class="carca-galere active" (click)="setActive($event)">
+    <div class="carca-galere" [class.active]="activeCar ==='mustang'" (click)="setActive('mustang')">
       <img src="assets/img/ford-mustang.png" alt="" />
     </div>
-    <div class="carca-galere" (click)="setActive($event)">
+    <div class="carca-galere"[class.active]="activeCar ==='baxa'" (click)="setActive('baxa')">
       <img src="assets/img/baxa-m3.png" alt="" />
     </div>
-    <div class="carca-galere" (click)="setActive($event)">
+    <div class="carca-galere" [class.active]="activeCar ==='volvo'" (click)="setActive('volvo')">
       <img src="assets/img/volvo-edition.png" alt="" />
     </div>
-    <div class="carca-galere" (click)="setActive($event)">
+    <div class="carca-galere"[class.active]="activeCar ==='GTR'" (click)="setActive('GTR')">
       <img src="assets/img/Merceds-GTR.png" alt="" />
     </div>
   </div>
@@ -34,9 +35,26 @@
   </div>
 </div>
 
+<div class="sliders">
+    <div class="group">
+        <img class="slide-1" src="assets/img/porshe.png "alt="">
+        <img class="slide-2" src="assets/img/shef.jpg "alt="">
+        <img class="slide-3" src="assets/img/porshe.jpg "alt="">
+        <img class="slide-4" src="assets/img/audi.jpg "alt="">
+        <img class="slide-5" src="assets/img/lamba.webp "alt="">
+    </div>
+     <div class="group">
+        <img class="slide-1" src="assets/img/porshe.png "alt="">
+        <img class="slide-2" src="assets/img/shef.jpg "alt="">
+        <img class="slide-3" src="assets/img/porshe.jpg "alt="">
+        <img class="slide-4" src="assets/img/audi.jpg "alt="">
+        <img class="slide-5" src="assets/img/lamba.webp "alt="">
+    </div>
+</div>
+
 
 <div class="car-application">
   <button mat-button class="button-mustang" (click)="openDialog()">
-    Выбери тачку
+    Выберите автомобиль
   </button>
 </div>

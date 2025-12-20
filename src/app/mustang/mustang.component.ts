@@ -5,6 +5,7 @@ import { repeat } from 'rxjs';
 import { ModalMustangComponent } from 'src/app/mustang/modal-mustang/modal-mustang.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,22 +18,25 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class MustangComponent implements OnInit {
   constructor(public dialog: MatDialog,private cdr: ChangeDetectorRef) {}
-  setActive(event: MouseEvent): void {
-    const allImages = document.querySelectorAll('.carca-galere');
-    const clickedImage = event.currentTarget as HTMLElement;
+    // const allImages = document.querySelectorAll('.carca-galere');
+    // const clickedImage = event.currentTarget as HTMLElement;
+    // allImages.forEach((image: Element) => image.classList.remove('active'));
+    // clickedImage.classList.add('active');
 
-    allImages.forEach((image: Element) => image.classList.remove('active'));
+    activeCar:string='mustang';
 
-    // Добавляем класс active только к выбранной картинке
-    clickedImage.classList.add('active');
-  }
+    setActive(carName:string):void{
+      this.activeCar=carName
+    }
+
+  
   openDialog(): void {
     this.dialog
       .open<ModalMustangComponent, null, boolean>(ModalMustangComponent, {
         width: '900px',
         height: '450px',
       })
-      .afterClosed()
+      .afterClosed().pipe(takeUntilDestroyed())
       .subscribe((result) => {
         console.log(result);
         if (!result) return;

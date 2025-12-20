@@ -64,10 +64,13 @@ export class ModalMustangComponent implements OnInit {
         } else {
           controlModel?.disable(); // Блокируем поле, если ничего не выбрано
         }
+      });
         // if (this.form.get('optionCar')?.value === 'VOLVO') {
         //   controlModel?.disable();
         // } это код если ты хочешь чтобы блокировалось поле моделей при выборе VOLVO
-      });
+
+
+      
   }
 
   availableModels: string[] = [];

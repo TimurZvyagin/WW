@@ -7,6 +7,7 @@ import { SayhiMessageComponent } from './say-hi-message/message.component';
 import { SkillBoxSlideComponent } from "./skill-slides/like-skill.component";
 import { ApplicationComponent } from './modal-application/application.component';
 import { MatDialog } from '@angular/material/dialog';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 
 @Component({
@@ -45,17 +46,12 @@ export class HomeComponent implements AfterViewInit{
           width: '600px',
           height: '550px'
         })
-        .afterClosed()
+        .afterClosed().pipe(takeUntilDestroyed())
         .subscribe((result) => {
           console.log(result);
           if (!result) return;
         });
     }
-   ngOnDestroy() {
-    if (this.videoElement?.nativeElement) {
-    }
-    
-  }
 
 }
   

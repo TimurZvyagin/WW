@@ -1,0 +1,233 @@
+[debug] [2025-12-20T18:03:19.479Z] ----------------------------------------------------------------------
+[debug] [2025-12-20T18:03:19.481Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2025-12-20T18:03:19.481Z] CLI Version:   15.1.0
+[debug] [2025-12-20T18:03:19.481Z] Platform:      win32
+[debug] [2025-12-20T18:03:19.481Z] Node Version:  v22.19.0
+[debug] [2025-12-20T18:03:19.482Z] Time:          Sat Dec 20 2025 21:03:19 GMT+0300 (Москва, стандартное время)
+[debug] [2025-12-20T18:03:19.482Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-20T18:03:19.483Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2025-12-20T18:03:25.344Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-12-20T18:03:25.344Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-12-20T18:03:39.449Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-20T18:03:39.449Z] > authorizing via signed-in user (porfavor.pablo522@gmail.com)
+[debug] [2025-12-20T18:03:39.450Z] Checked if tokens are valid: false, expires at: 1766169147527
+[debug] [2025-12-20T18:03:39.450Z] Checked if tokens are valid: false, expires at: 1766169147527
+[debug] [2025-12-20T18:03:39.450Z] > refreshing access token with scopes: []
+[debug] [2025-12-20T18:03:39.451Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-20T18:03:39.451Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-20T18:03:42.818Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-20T18:03:42.819Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-20T18:03:42.827Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular [none]
+[debug] [2025-12-20T18:04:12.843Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/spaprojectangular, {"headers":{},"method":"GET","signal":{"reason":""}}): AbortError: The user aborted a request.
+[debug] [2025-12-20T18:04:12.844Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/spaprojectangular (original: The user aborted a request.)
+[debug] [2025-12-20T18:04:17.863Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:275:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-20T18:06:33.919Z] ----------------------------------------------------------------------
+[debug] [2025-12-20T18:06:33.921Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-12-20T18:06:33.921Z] CLI Version:   15.1.0
+[debug] [2025-12-20T18:06:33.921Z] Platform:      win32
+[debug] [2025-12-20T18:06:33.921Z] Node Version:  v22.19.0
+[debug] [2025-12-20T18:06:33.922Z] Time:          Sat Dec 20 2025 21:06:33 GMT+0300 (Москва, стандартное время)
+[debug] [2025-12-20T18:06:33.922Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-12-20T18:06:35.953Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-20T18:06:35.953Z] > authorizing via signed-in user (porfavor.pablo522@gmail.com)
+[debug] [2025-12-20T18:06:35.954Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:06:35.954Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:06:35.954Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular [none]
+[debug] [2025-12-20T18:06:36.460Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular 200
+[debug] [2025-12-20T18:06:36.460Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular {"projectId":"spaprojectangular","projectNumber":"21413392972","displayName":"SPAprojectAngular","name":"projects/spaprojectangular","resources":{"hostingSite":"spaprojectangular"},"state":"ACTIVE","etag":"1_12f13768-6636-44a3-b3d9-e95579b5c869"}
+[info] i  Using project spaprojectangular (SPAprojectAngular) . 
+[info] 
+=== Hosting Setup
+[debug] [2025-12-20T18:06:36.468Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:06:36.468Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:06:36.468Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular [none]
+[debug] [2025-12-20T18:06:36.765Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular 200
+[debug] [2025-12-20T18:06:36.765Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular {"projectId":"spaprojectangular","projectNumber":"21413392972","displayName":"SPAprojectAngular","name":"projects/spaprojectangular","resources":{"hostingSite":"spaprojectangular"},"state":"ACTIVE","etag":"1_12f13768-6636-44a3-b3d9-e95579b5c869"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-12-20T18:06:58.901Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-12-20T18:07:02.346Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-12-20T18:07:02.346Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"12.7.0","browserURL":"https://www.gstatic.com/firebasejs/12.7.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/12.7.0/firebase.tgz"},"live":{"version":"12.7","browserURL":"https://www.gstatic.com/firebasejs/live/12.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/12.7/firebase.tgz"},"components":{"ai":"https://www.gstatic.com/firebasejs/12.7.0/firebase-ai.js","analytics":"https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/12.7.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/12.7.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/12.7.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/12.7.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/12.7.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/12.7.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/12.7.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/12.7.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/12.7.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/12.7.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js","data-connect":"https://www.gstatic.com/firebasejs/12.7.0/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.memory.js"}}
+[info] +  Wrote dist/new-profect/index.html 
+[info] 
+[info] +  Wrote configuration info to firebase.json 
+[info] +  Wrote project information to .firebaserc 
+[info] 
+[info] +  Firebase initialization complete! 
+[debug] [2025-12-20T18:07:12.376Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:275:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-20T18:07:23.708Z] ----------------------------------------------------------------------
+[debug] [2025-12-20T18:07:23.710Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2025-12-20T18:07:23.710Z] CLI Version:   15.1.0
+[debug] [2025-12-20T18:07:23.710Z] Platform:      win32
+[debug] [2025-12-20T18:07:23.710Z] Node Version:  v22.19.0
+[debug] [2025-12-20T18:07:23.710Z] Time:          Sat Dec 20 2025 21:07:23 GMT+0300 (Москва, стандартное время)
+[debug] [2025-12-20T18:07:23.710Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-12-20T18:07:26.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-20T18:07:26.552Z] > authorizing via signed-in user (porfavor.pablo522@gmail.com)
+[debug] [2025-12-20T18:07:26.553Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:07:26.553Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:07:26.554Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular [none]
+[debug] [2025-12-20T18:07:27.639Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular 200
+[debug] [2025-12-20T18:07:27.639Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spaprojectangular {"projectId":"spaprojectangular","projectNumber":"21413392972","displayName":"SPAprojectAngular","name":"projects/spaprojectangular","resources":{"hostingSite":"spaprojectangular"},"state":"ACTIVE","etag":"1_12f13768-6636-44a3-b3d9-e95579b5c869"}
+[info] i  Using project spaprojectangular (SPAprojectAngular) . 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=650960350&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-12-20T18:07:32.699Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-12-20T18:07:32.699Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-12-20T18:07:33.361Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-12-20T18:07:33.361Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-12-20T18:07:33.367Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-12-20T18:07:39.369Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-12-20T18:07:39.369Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"TimurZvyagin","id":110977754,"node_id":"U_kgDOBp1i2g","avatar_url":"https://avatars.githubusercontent.com/u/110977754?v=4","gravatar_id":"","url":"https://api.github.com/users/TimurZvyagin","html_url":"https://github.com/TimurZvyagin","followers_url":"https://api.github.com/users/TimurZvyagin/followers","following_url":"https://api.github.com/users/TimurZvyagin/following{/other_user}","gists_url":"https://api.github.com/users/TimurZvyagin/gists{/gist_id}","starred_url":"https://api.github.com/users/TimurZvyagin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/TimurZvyagin/subscriptions","organizations_url":"https://api.github.com/users/TimurZvyagin/orgs","repos_url":"https://api.github.com/users/TimurZvyagin/repos","events_url":"https://api.github.com/users/TimurZvyagin/events{/privacy}","received_events_url":"https://api.github.com/users/TimurZvyagin/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":2,"public_gists":0,"followers":0,"following":2,"created_at":"2022-08-10T10:41:43Z","updated_at":"2025-10-10T12:29:44Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":21110,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as TimurZvyagin 
+[info] 
+[debug] [2025-12-20T18:08:07.655Z] >>> [apiv2][query] GET https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/public-key type=owner
+[debug] [2025-12-20T18:08:08.077Z] <<< [apiv2][status] GET https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/public-key 200
+[debug] [2025-12-20T18:08:08.077Z] <<< [apiv2][body] GET https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/public-key {"key_id":"3380204578043523366","key":"QKsQ3i6Y4VFMMcacec4tVj6EY9QDxvKPNU8reKTcJHY="}
+[debug] [2025-12-20T18:08:08.079Z] >>> [apiv2][query] GET https://api.github.com/repos/TimurZvyagin/WW [none]
+[debug] [2025-12-20T18:08:08.353Z] <<< [apiv2][status] GET https://api.github.com/repos/TimurZvyagin/WW 200
+[debug] [2025-12-20T18:08:08.353Z] <<< [apiv2][body] GET https://api.github.com/repos/TimurZvyagin/WW {"id":1040235115,"node_id":"R_kgDOPgC6aw","name":"WW","full_name":"TimurZvyagin/WW","private":false,"owner":{"login":"TimurZvyagin","id":110977754,"node_id":"U_kgDOBp1i2g","avatar_url":"https://avatars.githubusercontent.com/u/110977754?v=4","gravatar_id":"","url":"https://api.github.com/users/TimurZvyagin","html_url":"https://github.com/TimurZvyagin","followers_url":"https://api.github.com/users/TimurZvyagin/followers","following_url":"https://api.github.com/users/TimurZvyagin/following{/other_user}","gists_url":"https://api.github.com/users/TimurZvyagin/gists{/gist_id}","starred_url":"https://api.github.com/users/TimurZvyagin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/TimurZvyagin/subscriptions","organizations_url":"https://api.github.com/users/TimurZvyagin/orgs","repos_url":"https://api.github.com/users/TimurZvyagin/repos","events_url":"https://api.github.com/users/TimurZvyagin/events{/privacy}","received_events_url":"https://api.github.com/users/TimurZvyagin/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/TimurZvyagin/WW","description":null,"fork":false,"url":"https://api.github.com/repos/TimurZvyagin/WW","forks_url":"https://api.github.com/repos/TimurZvyagin/WW/forks","keys_url":"https://api.github.com/repos/TimurZvyagin/WW/keys{/key_id}","collaborators_url":"https://api.github.com/repos/TimurZvyagin/WW/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/TimurZvyagin/WW/teams","hooks_url":"https://api.github.com/repos/TimurZvyagin/WW/hooks","issue_events_url":"https://api.github.com/repos/TimurZvyagin/WW/issues/events{/number}","events_url":"https://api.github.com/repos/TimurZvyagin/WW/events","assignees_url":"https://api.github.com/repos/TimurZvyagin/WW/assignees{/user}","branches_url":"https://api.github.com/repos/TimurZvyagin/WW/branches{/branch}","tags_url":"https://api.github.com/repos/TimurZvyagin/WW/tags","blobs_url":"https://api.github.com/repos/TimurZvyagin/WW/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/TimurZvyagin/WW/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/TimurZvyagin/WW/git/refs{/sha}","trees_url":"https://api.github.com/repos/TimurZvyagin/WW/git/trees{/sha}","statuses_url":"https://api.github.com/repos/TimurZvyagin/WW/statuses/{sha}","languages_url":"https://api.github.com/repos/TimurZvyagin/WW/languages","stargazers_url":"https://api.github.com/repos/TimurZvyagin/WW/stargazers","contributors_url":"https://api.github.com/repos/TimurZvyagin/WW/contributors","subscribers_url":"https://api.github.com/repos/TimurZvyagin/WW/subscribers","subscription_url":"https://api.github.com/repos/TimurZvyagin/WW/subscription","commits_url":"https://api.github.com/repos/TimurZvyagin/WW/commits{/sha}","git_commits_url":"https://api.github.com/repos/TimurZvyagin/WW/git/commits{/sha}","comments_url":"https://api.github.com/repos/TimurZvyagin/WW/comments{/number}","issue_comment_url":"https://api.github.com/repos/TimurZvyagin/WW/issues/comments{/number}","contents_url":"https://api.github.com/repos/TimurZvyagin/WW/contents/{+path}","compare_url":"https://api.github.com/repos/TimurZvyagin/WW/compare/{base}...{head}","merges_url":"https://api.github.com/repos/TimurZvyagin/WW/merges","archive_url":"https://api.github.com/repos/TimurZvyagin/WW/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/TimurZvyagin/WW/downloads","issues_url":"https://api.github.com/repos/TimurZvyagin/WW/issues{/number}","pulls_url":"https://api.github.com/repos/TimurZvyagin/WW/pulls{/number}","milestones_url":"https://api.github.com/repos/TimurZvyagin/WW/milestones{/number}","notifications_url":"https://api.github.com/repos/TimurZvyagin/WW/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/TimurZvyagin/WW/labels{/name}","releases_url":"https://api.github.com/repos/TimurZvyagin/WW/releases{/id}","deployments_url":"https://api.github.com/repos/TimurZvyagin/WW/deployments","created_at":"2025-08-18T16:55:41Z","updated_at":"2025-12-16T21:45:46Z","pushed_at":"2025-12-16T21:45:42Z","git_url":"git://github.com/TimurZvyagin/WW.git","ssh_url":"git@github.com:TimurZvyagin/WW.git","clone_url":"https://github.com/TimurZvyagin/WW.git","svn_url":"https://github.com/TimurZvyagin/WW","homepage":"","size":20246,"stargazers_count":0,"watchers_count":0,"language":"HTML","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":true,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_non_provider_patterns":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":0}
+[debug] [2025-12-20T18:08:08.356Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:08.356Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:08.356Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts [none]
+[debug] [2025-12-20T18:08:08.356Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts {"accountId":"github-action-1040235115","serviceAccount":{"displayName":"GitHub Actions (TimurZvyagin/WW)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository TimurZvyagin/WW"}}
+[debug] [2025-12-20T18:08:10.051Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts 409
+[debug] [2025-12-20T18:08:10.051Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts [omitted]
+[debug] [2025-12-20T18:08:10.052Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:10.052Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:10.053Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:10.053Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:10.053Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com [none]
+[debug] [2025-12-20T18:08:10.054Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:getIamPolicy [none]
+[debug] [2025-12-20T18:08:10.267Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com 200
+[debug] [2025-12-20T18:08:10.267Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com {"name":"projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com","projectId":"spaprojectangular","uniqueId":"100738142162254164006","email":"github-action-1040235115@spaprojectangular.iam.gserviceaccount.com","displayName":"GitHub Actions (TimurZvyagin/WW)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository TimurZvyagin/WW","oauth2ClientId":"100738142162254164006"}
+[debug] [2025-12-20T18:08:11.914Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:getIamPolicy 200
+[debug] [2025-12-20T18:08:11.914Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:getIamPolicy {"version":1,"etag":"BwZGTuxUru4=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-21413392972@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:porfavor.pablo522@gmail.com"]}]}
+[debug] [2025-12-20T18:08:11.914Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:11.915Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:11.915Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:setIamPolicy [none]
+[debug] [2025-12-20T18:08:11.915Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:setIamPolicy {"policy":{"version":1,"etag":"BwZGTuxUru4=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-21413392972@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:porfavor.pablo522@gmail.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-12-20T18:08:12.913Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:setIamPolicy 200
+[debug] [2025-12-20T18:08:12.913Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spaprojectangular:setIamPolicy {"version":1,"etag":"BwZGZhPU/14=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-21413392972@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:porfavor.pablo522@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-1040235115@spaprojectangular.iam.gserviceaccount.com"]}]}
+[debug] [2025-12-20T18:08:12.913Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:12.913Z] Checked if tokens are valid: true, expires at: 1766257421819
+[debug] [2025-12-20T18:08:12.914Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com/keys [none]
+[debug] [2025-12-20T18:08:12.914Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2025-12-20T18:08:13.259Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com/keys 200
+[debug] [2025-12-20T18:08:13.259Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com/keys {"name":"projects/spaprojectangular/serviceAccounts/github-action-1040235115@spaprojectangular.iam.gserviceaccount.com/keys/d6b60ccd8a9bde0fb5479770ddc03f521fe80ab7","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAic3BhcHJvamVjdGFuZ3VsYXIiLAogICJwcml2YXRlX2tleV9pZCI6ICJkNmI2MGNjZDhhOWJkZTBmYjU0Nzk3NzBkZGMwM2Y1MjFmZTgwYWI3IiwKICAicHJpdmF0ZV9rZXkiOiAiLS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tXG5NSUlFdmdJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLZ3dnZ1NrQWdFQUFvSUJBUUNrZXk4b0xOR3NDMVlhXG5jR0VocllMbzE0ekRSZXBlcXJoQmpXUno4ZThtTVVHbkU5SjVvT2VoK3VEaHlKUThvTWxucG1zU1ZmY2RBQkgvXG5tK1BuNWk3ZnZxT2ZNU2JPZjdCSXRiazFoT3kxS3pEcDFJVnAxVWdFdUJld253ODV5UzlUZUdmVTFORnF0OTNQXG5JQnR0a1gzYVlUSVBGM1I1WEVFNDBrRnlZbmJuQ0RuSHJZY2VlWGFjVmhxUGl1eVRjWk5ndHJIckw2NXl6ak1uXG5aQkNBT0FLRDN6azMzM0NWRTgyNlZUSlVyL21tYUpkSFZrNHpTTjRkSlRYajlEZUVpWkgwM1N4cWtobEtxVVJWXG54Kzl3V1BBckw4VEV6ekVUVC9mT1FXVzJ4MW1GRGtFb2YrcXdqNU1udE1ybTExMnc2Szc4OGErWGdPRk1YOCtIXG5xam9USEFWckFnTUJBQUVDZ2dFQUpGRTR0OWV4a2huTXNMaklrWjJVcnFITmFGNTdJZHp6SXpJN2tHaEdoRG5UXG5BN2VhUFJYY24wVGNPNjVFb09CbHFCZTBRNCtzcVFBWGVVZHIrb3UySk53Y2w2MU1Jc05KNHJ3UlFYSndxNDMyXG5WbU1BOUQzT0VaQ3VWbWJBZjJOZktrQ0hPSlNuQ3JlL1o1and4WEFmQ0VWMnZxTlFxZTFIVDJzSlhWN0ZYengwXG5pR2dlSDdaNFRub0FoTVZhKzlQWDNsL1lRdm9wWTRjZm9wRDIzUmtZVmcrZDBZU05xK0tmdXhsdUFpUmFzS0hwXG40K20xTjhBZ0VFTDFsVjRiZmd6OEIrTXVkc0FsSDB3TmZKUktnbGZBalZIM3Rjd1dTOXd3U3IrWVZSclZRSXNDXG53RXZYL3QvTEhINXdMWDh6L3RtdnhyVE1RZWxiU1JzUnJ2Qmwzd3hJZFFLQmdRRFZzNFVhdzdTNEZBV3JoaUdYXG5wTHk1bjl4UGdFYzVnTFlzMlo2Y1ArRm5mUEQrV0pRbEUxL1gzNnMxYUxxMnp3NEV0UkV5dTNyZlJCTUYrWnZzXG53UEt4bWZ1c1JYWXVYMHJBN1FlQzlCYjdKRGJLc1lkbmJuNXY5ZUZMUDIzb3luTHRuRWtHQnJxYjc1WmIrZUY5XG5zTjZUTHUrdVBrRnNVbVBNSXAwemZSTGpsd0tCZ1FERkNhRUYvTlhzQ3ovNDRhbGd6TXVvN2tNendxUFBBZzlWXG4yNHZxTW55aVJ4YWpnMXI3MFdEMTBKaExmdW1DSDJ6L1czOFI4U2oxT2RkZ0tZc1BMNnlIWi9Xd1ZqNk01Rk0wXG5JZnRwMUUrUVFkQWk0bGRtQWhQbGQ4MGtOZU9lcGdiN0VacW9TZGZuRnJESHloeG9EOXhyUDdDZ1piZlhnaE9IXG5Ud3Fva1QwWFRRS0JnUUNSZkdNc3dubmhMRGhqK3JBWjloeEozMHgwajJkdC9YT0kreXJoUXhnb2hVWG9VdE9nXG5uaDBNOFlnMGx6VXVTYTVJaENET1FoYTNzemVrUkxmanFjUlFKdjNRM1lWRXNybEl1Tlg1VUVYbytsR1hFdCtWXG5DZ05vSTZRYXYzY0xHZkMrVlR6ZHJtMFN4ankrSjFOZFo3RlAwSTk2TjRZQXdlS1JVaXRscDB2Wnh3S0JnUUNrXG45SVM4RUltL1RVUEhScFNZbDV0QTJBZW13NktENFlPWksyNGRLUnN5ZURVNXV2Um1zVWx0UWE3ZU5XZWtLazhFXG5FVU4yYitFTU85cFZoVElJQ3E5enhOTHBSNnFpSlZ5SzNwQXVieklVNFNRd3NERGZFNG80cDIwMGpYRDhGcDd0XG5malZ1QWpRZ0lOenF4Z2UyRHVGSFlGQ3NWN3ZyVGRpdmhMcTFtTEgrV1FLQmdBTm1ad1RBRzkyM2ZIOFdWMkcxXG5ZVC9TTDhtR3lkbGhDME0xczY5WDhQUWM0U3V1ZFBYcVJRUVk0R1EzUUJ5Wkd3ejN1VWpuSjF3ZlhRMHprSkFkXG5sVCtva2JZZTZFK0hQaHM4cG1WTGlWV0laTlNKYWk4R3BQK1hFZDBSeHRaRGRmNkNzRHVXYUNjSGI0RHNRaWhtXG5SeUZCYUIwQ3lzaWcrU1ZTWG1nTXQ2MG5cbi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS1cbiIsCiAgImNsaWVudF9lbWFpbCI6ICJnaXRodWItYWN0aW9uLTEwNDAyMzUxMTVAc3BhcHJvamVjdGFuZ3VsYXIuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJjbGllbnRfaWQiOiAiMTAwNzM4MTQyMTYyMjU0MTY0MDA2IiwKICAiYXV0aF91cmkiOiAiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL2F1dGgiLAogICJ0b2tlbl91cmkiOiAiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLAogICJhdXRoX3Byb3ZpZGVyX3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3YxL2NlcnRzIiwKICAiY2xpZW50X3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vcm9ib3QvdjEvbWV0YWRhdGEveDUwOS9naXRodWItYWN0aW9uLTEwNDAyMzUxMTUlNDBzcGFwcm9qZWN0YW5ndWxhci5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgInVuaXZlcnNlX2RvbWFpbiI6ICJnb29nbGVhcGlzLmNvbSIKfQo=","validAfterTime":"2025-12-20T18:08:13Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-1040235115 with Firebase Hosting admin permissions. 
+[debug] [2025-12-20T18:08:13.262Z] >>> [apiv2][query] PUT https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SPAPROJECTANGULAR [none]
+[debug] [2025-12-20T18:08:13.263Z] >>> [apiv2][body] PUT https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SPAPROJECTANGULAR {"encrypted_value":"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","key_id":"3380204578043523366"}
+[debug] [2025-12-20T18:08:13.572Z] <<< [apiv2][status] PUT https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SPAPROJECTANGULAR 201
+[debug] [2025-12-20T18:08:13.572Z] <<< [apiv2][body] PUT https://api.github.com/repos/TimurZvyagin/WW/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SPAPROJECTANGULAR {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_SPAPROJECTANGULAR. 
+[info] i  You can manage your secrets at https://github.com/TimurZvyagin/WW/settings/secrets. 
+[info] 
+[info] 
+[info] +  Created workflow file C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000\.github/workflows/firebase-hosting-pull-request.yml 
+[info] 
+[info] +  Created workflow file C:\Users\timurin\OneDrive\Desktop\Все коды vs\проэкты\сайт того все\site-3000\.github/workflows/firebase-hosting-merge.yml 
+[info] 
+[info] i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] i  Action required: Push any new workflow file(s) to your repo 
+[info] 
+[info] +  Wrote configuration info to firebase.json 
+[info] +  Wrote project information to .firebaserc 
+[info] 
+[info] +  Firebase initialization complete! 
+[debug] [2025-12-20T18:13:09.541Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\timurin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:275:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[error] 
+[error] Error: An unexpected error has occurred.
