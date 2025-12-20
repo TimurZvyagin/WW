@@ -5,7 +5,8 @@ import { appConfig } from './app/app.config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
-import { importProvidersFrom } from '@angular/core';
+import { importProvidersFrom, isDevMode } from '@angular/core';
+import { provideServiceWorker } from '@angular/service-worker';
 
 bootstrapApplication(AppComponent, {
   ...appConfig,
@@ -20,7 +21,10 @@ bootstrapApplication(AppComponent, {
     appConfig.providers || [],
     provideAnimations(),
     provideEnvironmentNgxMask(),
-    provideAnimationsAsync(),
+    provideAnimationsAsync(), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          }),
   ],
 
 }).catch((err) => console.error(err));
