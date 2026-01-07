@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,} from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { repeat } from 'rxjs';
 import { ModalMustangComponent } from 'src/app/mustang/modal-mustang/modal-mustang.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './mustang.component.html',
   styleUrl: './mustang.component.scss',
 })
-export class MustangComponent implements OnInit {
+export class MustangComponent implements OnInit  {
   constructor(public dialog: MatDialog,private cdr: ChangeDetectorRef) {}
     // const allImages = document.querySelectorAll('.carca-galere');
     // const clickedImage = event.currentTarget as HTMLElement;
@@ -29,7 +28,6 @@ export class MustangComponent implements OnInit {
       this.activeCar=carName
     }
 
-  
   openDialog(): void {
     this.dialog
       .open<ModalMustangComponent, null, boolean>(ModalMustangComponent, {
@@ -46,7 +44,7 @@ export class MustangComponent implements OnInit {
 
   ngOnInit(): void {
 
-  const fullText: string = "Hello my dear friends, today we will learning MUSTANG  ";
+  const fullText: string = "Hello my dear friends, today we will learn MUSTANG  ";
   const obj: { length: number } = { length: 1 };
 
   gsap.to(obj, {

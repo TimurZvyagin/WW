@@ -15,9 +15,9 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'lays',
+    path: 'home',
     loadComponent: () =>
-      import('./lays/lays.component').then((c) => c.LaysComponent),
+      import('./home-group/home.component').then((c) => c.HomeComponent),
   },
 
   {
