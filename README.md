@@ -1,2 +1,2 @@
 Приложение написанное на Angular 
-ссылка на SPA:spaprojectangular.web.app
+ссылка на SPA:https://spaprojectangular.web.app
