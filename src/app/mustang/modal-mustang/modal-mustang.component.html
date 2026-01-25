@@ -7,8 +7,8 @@
     <mat-form-field class="form-option">
       <mat-select required formControlName="optionCar" placeholder="Car option">
         <mat-option *ngFor="let car of object.keys(allModels)" [value]="car">{{
-          car
-        }}</mat-option>
+          car}}
+        </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="form-option">

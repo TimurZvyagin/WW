@@ -96,14 +96,14 @@ export class ModalMustangComponent implements OnInit {
 
 }
 
-
-
-
-//  function chisla(v:number){
+//  function chisla(v:number) {
 //   return function drugie(num:number){
 //     return v + num
 //   }
 // }
+// const newojb =chisla(10) 
+// console.log(newojb(3))
+
 // const ten = chisla(10)
 // console.log(ten(10))
 
@@ -120,4 +120,13 @@ export class ModalMustangComponent implements OnInit {
 
 // console.log(fixedLinks(brokenLinks))
 
+// const name ='alex'
+// console.log(typeof name)  
+
+// const user = {
+//   name: "Иван",
+//   greet() { console.log(this.name); }
+// };
+// const newgreet = user.greet.bind(user);
+// setTimeout(newgreet, 1000);
 

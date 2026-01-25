@@ -22,8 +22,7 @@ export class MustangComponent implements OnInit  {
     // allImages.forEach((image: Element) => image.classList.remove('active'));
     // clickedImage.classList.add('active');
 
-    activeCar:string='mustang';
-
+    public activeCar:string='mustang';
     setActive(carName:string):void{
       this.activeCar=carName
     }
@@ -43,7 +42,6 @@ export class MustangComponent implements OnInit  {
   public displayText:string='';
 
   ngOnInit(): void {
-
   const fullText: string = "Hello my dear friends, today we will learn MUSTANG  ";
   const obj: { length: number } = { length: 1 };
 
@@ -62,4 +60,6 @@ export class MustangComponent implements OnInit  {
     }
   )
   }
+
+  
 }

@@ -18,10 +18,11 @@
 .nav_link {
   font-family: "Monaco", sans-serif;
   color: #fecd0a;
-  margin-right: 70px;
-  text-decoration: none;
+  text-decoration:none ;
 }
 .nav {
+  gap: 230px;
+  align-items: center;
   display: flex;
   font-size: 13px;
   font-weight: 300;
