@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef,  Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, ElementRef,  inject,  Renderer2, ViewChild } from '@angular/core';
 // import { SlidersComponent } from '../sliders/sliders.component';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,11 +24,12 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements AfterViewInit{
- private observer!: IntersectionObserver;
-  constructor(private router: Router,private dialog:MatDialog,  private el: ElementRef,
-    private renderer: Renderer2) {}
+  private  readonly destroyRef = inject(DestroyRef);
 
-  @ViewChild('backgroundVideo') videoElement!: ElementRef<HTMLVideoElement>;  
+
+  constructor(private dialog:MatDialog) {}
+
+  @ViewChild('backgroundVideo') videoElement!:ElementRef<HTMLVideoElement>;  
    private initializeVideo() {
     const video = this.videoElement.nativeElement;
     // Перезагружаем видео
@@ -40,16 +41,17 @@ export class HomeComponent implements AfterViewInit{
   ngAfterViewInit():void {
     this.initializeVideo();
   }
+
   ModalApl(): void {
       this.dialog
         .open<ApplicationComponent, null, boolean>(ApplicationComponent, {
           width: '600px',
           height: '550px'
         })
-        .afterClosed().pipe(takeUntilDestroyed())
+        .afterClosed().pipe(takeUntilDestroyed(this.destroyRef))
         .subscribe((result) => {
+          if (!result) return // если резульатата нет, то retrun останавливает код 
           console.log(result);
-          if (!result) return;
         });
     }
 

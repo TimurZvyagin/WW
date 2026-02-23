@@ -1,4 +1,5 @@
-<div [@fadeOut]="showme ? 'visible' : 'hidden'" class="sayhi-banner">
+<div *ngIf="showme" @fadeOut class="sayhi-banner">  
+<!--а можно реализовать это через тернарный оператор,но придется в анимации absolute вешать, чтобы она не завешивала сайт-->
   <div class="sayhi-wrapper">
     <div class="good_wishes">
       <h1>привет</h1>

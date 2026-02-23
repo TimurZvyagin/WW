@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, delay, Observable, of, } from 'rxjs';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { BehaviorSubject, delay, Observable, of, timer, } from 'rxjs';
 
 
 @Injectable({
@@ -17,20 +16,18 @@ export class SayhiMessageService {
     }
   }
   get state$(): Observable<boolean> {
-    return this.bannerState$.asObservable(); //подписка
+    return this.bannerState$.asObservable(); 
   }
 
   private showbanner() {
     this.bannerState$.next(true);
+    timer(3000).subscribe(()=>{this.bannerState$.next(false)});// сам отписывается, то есть уничтожается через 3 секунуды 
 
-        of(null)
-        .pipe(delay(3000), takeUntilDestroyed())
-      .subscribe(() => {
-        this.bannerState$.next(false);
-      });
     // setTimeout(() => {
     //   this.bannerstate.next(false);
     // }, 3000);
+
+    // of(null).pipe(delay(3000)).subscribe(()=>{this.bannerState$.next(false)}) // вот это прошлый код 
   }
 }
 

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit,ChangeDetectorRef,} from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef, DestroyRef, inject,} from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ModalMustangComponent } from 'src/app/mustang/modal-mustang/modal-mustang.component';
 import { gsap } from 'gsap';
@@ -16,6 +16,8 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrl: './mustang.component.scss',
 })
 export class MustangComponent implements OnInit  {
+  private readonly destroyRef = inject(DestroyRef);
+
   constructor(public dialog: MatDialog,private cdr: ChangeDetectorRef) {}
     // const allImages = document.querySelectorAll('.carca-galere');
     // const clickedImage = event.currentTarget as HTMLElement;
@@ -23,6 +25,7 @@ export class MustangComponent implements OnInit  {
     // clickedImage.classList.add('active');
 
     public activeCar:string='mustang';
+    
     setActive(carName:string):void{
       this.activeCar=carName
     }
@@ -33,7 +36,7 @@ export class MustangComponent implements OnInit  {
         width: '900px',
         height: '450px',
       })
-      .afterClosed().pipe(takeUntilDestroyed())
+      .afterClosed().pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((result) => {
         console.log(result);
         if (!result) return;
