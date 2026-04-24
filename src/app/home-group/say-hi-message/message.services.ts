@@ -20,8 +20,8 @@ export class SayhiMessageService {
   }
 
   private showbanner() {
-    this.bannerState$.next(true);
-    timer(3000).subscribe(()=>{this.bannerState$.next(false)});// сам отписывается, то есть уничтожается через 3 секунуды 
+    this.bannerState$.next(true); 
+    timer(3000).subscribe(()=>{this.bannerState$.next(false)});// сам отписывается, то есть уничтожается через 3 секунуды  и сам создает поток 
 
     // setTimeout(() => {
     //   this.bannerstate.next(false);

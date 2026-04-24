@@ -47,8 +47,7 @@ export class MustangComponent implements OnInit  {
   ngOnInit(): void {
   const fullText: string = "Hello my dear friends, today we will learn MUSTANG  ";
   const obj: { length: number } = { length: 1 };
-
-  gsap.to(obj, {
+    gsap.to(obj, {
     length: fullText.length,
     duration: 4,
     ease: "none",

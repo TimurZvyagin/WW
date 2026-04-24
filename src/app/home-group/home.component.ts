@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, DestroyRef, ElementRef,  inject,  Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, ElementRef,  inject,  OnInit,  Renderer2, signal, ViewChild } from '@angular/core';
 // import { SlidersComponent } from '../sliders/sliders.component';
-import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { SayhiMessageComponent } from './say-hi-message/message.component';
 import { SkillBoxSlideComponent } from "./skill-slides/like-skill.component";
@@ -23,8 +22,10 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements AfterViewInit{
+export class HomeComponent implements AfterViewInit, OnInit{
   private  readonly destroyRef = inject(DestroyRef);
+  count= signal(0)
+
 
 
   constructor(private dialog:MatDialog) {}
@@ -54,7 +55,18 @@ export class HomeComponent implements AfterViewInit{
           console.log(result);
         });
     }
-
-}
-  
-
+    ngOnInit(){
+      // console.log(this.count())
+      // this.count.set(100)
+      // console.log(this.count())
+      // this.count.update(value=> value+ 1)
+      // this.count()
+    }  
+  }
+const count = signal(0)
+    count()
+      count.set(100)
+      count()
+      count.update(value=> value+ 1)
+      count()
+{}

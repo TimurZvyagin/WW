@@ -1,9 +1,10 @@
 <div class="modal-application">
   <form class="second_form" [formGroup]="form">
-    <mat-form-field class="modal-input">
+    <mat-form-field class="modal-input" >
       <mat-label>say my name</mat-label>
-      <input matInput formControlName="name" />
+      <input  matInput formControlName="name" />
     </mat-form-field>
+
     <mat-form-field class="form-option">
       <mat-select required formControlName="optionCar" placeholder="Option cars">
         <mat-option *ngFor="let car of object.keys(allModels)" [value]="car">{{
@@ -11,6 +12,7 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+
     <mat-form-field class="form-option">
       <mat-select formControlName="optionModel" placeholder="Option models">
         <mat-option
@@ -20,6 +22,7 @@
         >
       </mat-select>
     </mat-form-field>
+
     <button
       [disabled]="form.invalid"
       class="modal-button-appliction"
@@ -29,7 +32,3 @@
     </button>
   </form>
 </div>
-
-<!-- @for(item of items; track item.id ){
-  {{item.id}}
-} -->

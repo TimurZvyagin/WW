@@ -1,9 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component,  } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation-header/navigation.component';
-import { bigDataInfo } from './big-data/services';
-import { anotherData } from './big-data/interfaces/bigInterfaces';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +12,6 @@ import { anotherData } from './big-data/interfaces/bigInterfaces';
   providers: [],
 })
 export class AppComponent {
-  title = 'new-profect';
-  bigDataInfo = inject(bigDataInfo)
-  bigData:anotherData[]=[]
 
-  constructor(){
-    this.bigDataInfo.getTestAccount().subscribe(value =>{
-      this.bigData=value
-    })
-  }
   
 }

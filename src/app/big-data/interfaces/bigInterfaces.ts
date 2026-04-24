@@ -1,6 +1,6 @@
-export interface anotherData {
-id: number,
-username:string| null,
+// export interface anotherData {
+// id: number,
+// username:string| null,
 
 
-}
+// }

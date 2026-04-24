@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit } from '@angular/core';
 import { SayhiMessageService } from './message.services';
 import { CommonModule } from '@angular/common';
 import {
@@ -7,6 +7,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 
 const fadeOut = trigger('fadeOut', [
@@ -37,10 +38,10 @@ const fadeOut = trigger('fadeOut', [
 export class SayhiMessageComponent implements OnInit {
   showme: boolean = true;
 
-  constructor(private banner: SayhiMessageService) {}
+  constructor(private banner: SayhiMessageService, private destroyRef: DestroyRef) {}
 
   ngOnInit(): void {
-    this.banner.state$.subscribe((state) => {
+    this.banner.state$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((state) => {
       this.showme = state;
     });
   }
