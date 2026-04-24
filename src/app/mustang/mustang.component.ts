@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit,ChangeDetectorRef, DestroyRef, inject,} from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef, DestroyRef, inject, effect, viewChild, ElementRef,} from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ModalMustangComponent } from 'src/app/mustang/modal-mustang/modal-mustang.component';
 import { gsap } from 'gsap';
@@ -16,19 +16,33 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrl: './mustang.component.scss',
 })
 export class MustangComponent implements OnInit  {
-  private readonly destroyRef = inject(DestroyRef);
+  private readonly destroyRef = inject(DestroyRef); 
 
-  constructor(public dialog: MatDialog,private cdr: ChangeDetectorRef) {}
-    // const allImages = document.querySelectorAll('.carca-galere');
-    // const clickedImage = event.currentTarget as HTMLElement;
-    // allImages.forEach((image: Element) => image.classList.remove('active'));
-    // clickedImage.classList.add('active');
+  public activeCar:string='mustang';
 
-    public activeCar:string='mustang';
-    
-    setActive(carName:string):void{
-      this.activeCar=carName
-    }
+  setActive(carName:string):void{
+    this.activeCar=carName
+  }
+
+  videoMustang = viewChild<ElementRef<HTMLVideoElement>>('carMustang');
+  videoCarSecond = viewChild<ElementRef<HTMLVideoElement>>('SecondCar');
+
+  constructor(public dialog: MatDialog,private cdr: ChangeDetectorRef) {
+    effect(() => {
+      const video = this.videoMustang()?.nativeElement;
+      if (video) {
+        video.muted = true;
+        video.load();
+      }
+    })
+    effect(() => {
+      const video = this.videoCarSecond()?.nativeElement;
+      if (video) {
+        video.muted = true;
+        video.load();
+      }
+    })
+  };
 
   openDialog(): void {
     this.dialog
@@ -62,6 +76,4 @@ export class MustangComponent implements OnInit  {
     }
   )
   }
-
-  
 }

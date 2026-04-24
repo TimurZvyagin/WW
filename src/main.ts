@@ -19,7 +19,6 @@ bootstrapApplication(AppComponent, {
       })
     ),
     appConfig.providers || [],
-    provideAnimations(),
     provideEnvironmentNgxMask(),
     provideAnimationsAsync(), provideServiceWorker('ngsw-worker.js', {
             enabled: !isDevMode(),

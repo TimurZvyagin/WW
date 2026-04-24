@@ -105,11 +105,6 @@ export class ModalMustangComponent implements OnInit {
   
 
 
-  // items:Items[]=[
-  //   {name:"hi neggers", id:2},
-  //   {name:"hi negge", id:23},
-  //   {name:"hi ners", id:233}
-  // ]
 }
 
 //  function chisla(v:number) {

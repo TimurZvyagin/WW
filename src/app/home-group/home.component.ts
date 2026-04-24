@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, DestroyRef, ElementRef,  inject,  OnInit,  Renderer2, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, effect, ElementRef,  inject,  OnInit,   signal, viewChild, ViewChild } from '@angular/core';
 // import { SlidersComponent } from '../sliders/sliders.component';
 import { MatButtonModule } from '@angular/material/button';
 import { SayhiMessageComponent } from './say-hi-message/message.component';
@@ -22,26 +22,20 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements AfterViewInit, OnInit{
+export class HomeComponent{
   private  readonly destroyRef = inject(DestroyRef);
-  count= signal(0)
+  videoElement = viewChild<ElementRef<HTMLVideoElement>>('backgroundVideo');
 
+  constructor(private dialog:MatDialog) {
 
-
-  constructor(private dialog:MatDialog) {}
-
-  @ViewChild('backgroundVideo') videoElement!:ElementRef<HTMLVideoElement>;  
-   private initializeVideo() {
-    const video = this.videoElement.nativeElement;
-    // Перезагружаем видео
-    video.load();
-     video.muted = true;
-
-  }
-
-  ngAfterViewInit():void {
-    this.initializeVideo();
-  }
+    effect(() => {
+      const video = this.videoElement()?.nativeElement;
+      if (video) {
+        video.muted = true;
+        video.load();
+      }
+    })
+  };
 
   ModalApl(): void {
       this.dialog
@@ -55,18 +49,4 @@ export class HomeComponent implements AfterViewInit, OnInit{
           console.log(result);
         });
     }
-    ngOnInit(){
-      // console.log(this.count())
-      // this.count.set(100)
-      // console.log(this.count())
-      // this.count.update(value=> value+ 1)
-      // this.count()
-    }  
-  }
-const count = signal(0)
-    count()
-      count.set(100)
-      count()
-      count.update(value=> value+ 1)
-      count()
-{}
+}
